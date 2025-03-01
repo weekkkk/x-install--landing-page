@@ -10,6 +10,10 @@ export default <Partial<Config>>{
         },
         green: "#6AE15F",
         violet: "#8706D6",
+        graphite: "#383838",
+        mediumGray: "#8A8A8A",
+        сharcoal: "#151515",
+        jetBlack: "#101010"
       },
       fontSize: {
         xs: ["0.75rem", "1.2"],
