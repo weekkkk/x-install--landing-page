@@ -3,6 +3,7 @@
   <UButton size="md" disabled>Начать</UButton>
   <UButton color="primary" variant="outline" size="md">Мобилка</UButton>
   <UTabs :items="items" class="w-[10rem]" />
+  <UInput placeholder="Имя" />
 </template>
 
 <script setup>
