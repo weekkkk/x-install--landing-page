@@ -1,16 +1,8 @@
 <template>
-  <UButton size="sm">Связаться</UButton>
-  <UButton size="md" disabled>Начать</UButton>
-  <UButton color="primary" variant="outline" size="md">Мобилка</UButton>
-  <UTabs :items="items" class="w-[10rem]" />
-  <UInput placeholder="Имя" />
-  <UTextarea placeholder="Сообщение" />
+  <div class="ml-10 mr-8 my-[2.35rem]">
+    <MainPage />
+  </div>
 </template>
 
 <script setup>
-const items = [{
-  label: 'EN',
-}, {
-  label: 'RU',
-}]
 </script>

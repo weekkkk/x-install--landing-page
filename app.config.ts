@@ -14,9 +14,9 @@ export default defineAppConfig({
       color: {
         primary: {
           outline:
-            "hover:dark:bg-white hover:dark:text-black border dark:disabled:bg-[#383838] dark:disabled:text-[#8A8A8A] dark:disabled:border-none",
+            "hover:dark:bg-white hover:dark:text-black border dark:disabled:bg-graphite dark:disabled:text-mediumGray dark:disabled:border-none",
           solid:
-            "shadow-sm dark:text-black dark:bg-gradient-to-r dark:from-turquoise-100 dark:to-green hover:dark:to-turquoise-0 dark:disabled:to-[#383838] dark:disabled:from-[#383838] dark:disabled:text-[#8A8A8A]",
+            "shadow-sm dark:text-black dark:bg-gradient-to-r dark:from-turquoise-100 dark:to-green hover:dark:to-turquoise-0 dark:disabled:to-graphite dark:disabled:from-graphite dark:disabled:text-mediumGray",
         },
       },
     },
@@ -25,13 +25,14 @@ export default defineAppConfig({
         base: "top-0, bottom-0, h-auto",
         padding: "p-0",
         rounded: "rounded-[2.5rem]",
-        background: "dark:bg-[#151515]",
+        background: "dark:bg-сharcoal",
         marker: {
           rounded: "rounded-[2.5rem]",
           background:
             "dark:bg-gradient-to-r dark:from-turquoise-100 dark:to-green",
         },
         tab: {
+          height: "h-[3.2rem]",
           active: "dark:text-black",
           inactive: "dark:text-white",
           size: "text-[1.25rem]",
@@ -48,7 +49,7 @@ export default defineAppConfig({
       color: {
         white: {
           outline:
-            "dark:bg-[#101010] dark:text-[#8A8A8A] dark:placeholder:text-[#8A8A8A] focus:outline-none focus:ring-0 rounded-[2rem]",
+            "dark:bg-jetBlack dark:text-mediumGray dark:placeholder:text-mediumGray focus:outline-none focus:ring-0 rounded-[2rem]",
         },
       },
     },
@@ -62,7 +63,7 @@ export default defineAppConfig({
       color: {
         white: {
           outline:
-            "dark:bg-[#101010] dark:text-[#8A8A8A] dark:placeholder:text-[#8A8A8A] focus:outline-none focus:ring-0 rounded-[2rem]",
+            "dark:bg-jetBlack dark:text-mediumGray dark:placeholder:text-mediumGray focus:outline-none focus:ring-0 rounded-[2rem]",
         },
       },
     },
