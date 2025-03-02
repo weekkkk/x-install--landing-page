@@ -4,6 +4,7 @@
   <UButton color="primary" variant="outline" size="md">Мобилка</UButton>
   <UTabs :items="items" class="w-[10rem]" />
   <UInput placeholder="Имя" />
+  <UTextarea placeholder="Сообщение" />
 </template>
 
 <script setup>

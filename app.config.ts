@@ -52,5 +52,19 @@ export default defineAppConfig({
         },
       },
     },
+    textarea: {
+      size: {
+        sm: "text-[1.5rem]",
+      },
+      padding: {
+        sm: "p-10",
+      },
+      color: {
+        white: {
+          outline:
+            "dark:bg-[#101010] dark:text-[#8A8A8A] dark:placeholder:text-[#8A8A8A] focus:outline-none focus:ring-0 rounded-[2rem]",
+        },
+      },
+    },
   },
 });
