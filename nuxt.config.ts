@@ -8,6 +8,14 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/src/app/assets/css/tailwind.css",
   },
+  icon: {
+    customCollections: [
+      {
+        prefix: "xi-i",
+        dir: "./src/app/assets/icons",
+      },
+    ],
+  },
   ui: {
     global: true,
   },
