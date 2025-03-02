@@ -5,10 +5,4 @@
 </template>
 
 <script setup>
-
-const items = [{
-  label: "denis"
-}, {
-  label: "denis"
-}]
 </script>
