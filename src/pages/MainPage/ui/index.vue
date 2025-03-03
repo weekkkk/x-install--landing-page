@@ -1,7 +1,9 @@
 <template>
-    <HeaderWidget />
-  </template>
-  
-  <script setup>
-  </script>
-  
+  <HeaderWidget />
+</template>
+
+<script setup>
+useHead({
+  title: 'X-Install'
+})
+</script>

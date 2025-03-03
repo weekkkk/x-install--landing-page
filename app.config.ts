@@ -22,7 +22,7 @@ export default defineAppConfig({
     },
     tabs: {
       list: {
-        base: "top-0, bottom-0, h-auto",
+        base: "relative ,top-0, bottom-0, h-auto",
         padding: "p-0",
         rounded: "rounded-[2.5rem]",
         background: "dark:bg-сharcoal",
