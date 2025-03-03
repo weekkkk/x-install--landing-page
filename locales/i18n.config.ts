@@ -1,12 +1,16 @@
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "en",
+  locale: "ru",
   messages: {
     en: {
-      welcome: "Welcome",
+      aboutUs: "About Us",
+      services: "Services",
+      price: "Price",
     },
     ru: {
-      welcome: "Добро",
+      aboutUs: "О нас",
+      services: "Услуги",
+      price: "Цены",
     },
   },
 }));

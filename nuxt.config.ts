@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxtjs/i18n"],
   i18n: {
-    vueI18n: "./i18n.config.ts",
+    vueI18n: "./locales/i18n.config.ts",
   },
   tailwindcss: {
     cssPath: "~/src/app/assets/css/tailwind.css",
