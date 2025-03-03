@@ -24,20 +24,14 @@
                 <UButton size="md" class="flex justify-center w-[16.5rem] text-lg leading-[1.4915rem] font-semibold">
                     Начать</UButton>
                 <UButton variant="outline" label="Наши услуги"
-                    class="flex justify-center w-[16.5rem] text-lg leading-[1.4915rem] font-semibold text-red-600">
+                    class="flex justify-center w-[16.5rem] text-lg leading-[1.4915rem] font-semibold ">
                     <template #trailing>
-                        <div class="text-red-600">
-                            <UIcon name="xi-i:arrow-right" class="w-6 h-6 text-red-600" />
-
-                        </div>
+                        <UIcon name="xi-i:arrow-right" class="w-6 h-6" />
                     </template>
                 </UButton>
             </div>
         </div>
+        <UiBlurCircle class="top-[15.5rem] left-[2.6rem] right-[77.7rem]" />
+        <NuxtImg src="/images/grid.png" />
     </div>
 </template>
-
-<svg width="30" height="30" viewBox="0 0 30 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M11.1367 24.9L19.2867 16.75C20.2492 15.7875 20.2492 14.2125 19.2867 13.25L11.1367 5.09998" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    
