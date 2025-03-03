@@ -1,10 +1,24 @@
 <script setup lang="ts">
+const { setLocale } = useI18n()
 
 const items = [{
     label: 'EN',
 }, {
     label: 'RU',
 }]
+
+/**Переключение локализации */
+const switchLocalization = (index: number) => {
+    switch (index) {
+        case 0:
+            setLocale('en')
+            break;
+        case 1:
+            setLocale('ru')
+            break;
+    }
+}
+
 </script>
 
 <template>
@@ -19,7 +33,8 @@ const items = [{
             <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">DSP</UButton>
         </div>
         <div class="flex items-center gap-4">
-            <UTabs :items="items" class="w-[8.5rem]" :ui="{ tab: 'h-[3.2rem]' }" />
+            <UTabs :default-index="1" @change="switchLocalization" :items="items" class="w-[8.5rem]"
+                :ui="{ tab: 'h-[3.2rem]' }" />
             <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg">Связаться</UButton>
         </div>
     </header>
