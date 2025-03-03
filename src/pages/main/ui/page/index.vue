@@ -1,5 +1,5 @@
 <template>
-  <HeaderWidget />
+  <LayoutHeaderWidget />
 </template>
 
 <script setup>
