@@ -1,7 +1,6 @@
 <template>
-    <HeaderWidget />
-  </template>
-  
-  <script setup>
-  </script>
-  
+  <HeaderWidget />
+  <PriceListWidget />
+</template>
+
+<script setup></script>
