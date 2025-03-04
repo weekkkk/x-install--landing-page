@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { UiBlurCircle } from '#components';
+
 </script>
 <template>
     <div class="flex items-center flex-col">
@@ -31,7 +33,12 @@
                 </UButton>
             </div>
         </div>
-        <UiBlurCircle class="top-[15.5rem] left-[2.6rem] right-[77.7rem]" />
-        <NuxtImg src="/images/grid.png" />
+        <UiBlurCircle color="bg-turquoise-100" class="absolute left-[2.6rem] top-[15.5rem]" />
+        <UiBlurCircle color="bg-turquoise-100"
+            class="absolute left-[75.35rem] right-[2.4rem] top-[29.15rem] w-[18.25rem] h-[18.25rem]" />
+        <UiBlurCircle color="bg-violet" class="absolute left-[9.3rem] top-[35.3rem] !w-[12.5rem] !h-[12.5rem]" />
+        <UiBlurCircle color="bg-violet"
+            class="absolute left-[63.25rem] right-[19rem] top-[12.2rem] !w-[13.75rem] !h-[13.75rem]" />
+        <NuxtImg src="/images/grid.png" alt="gridBackground" class="absolute top-0 left-0 -z-20 w-full max-w-none" />
     </div>
 </template>
