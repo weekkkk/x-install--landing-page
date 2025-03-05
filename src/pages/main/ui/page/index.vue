@@ -4,8 +4,7 @@
 </template>
 
 <script setup>
-
 useHead({
-  title: 'X-Install'
-})
+  title: "X-Install",
+});
 </script>
