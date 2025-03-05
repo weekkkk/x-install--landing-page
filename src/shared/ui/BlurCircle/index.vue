@@ -6,6 +6,6 @@ const props = defineProps<UiBlurCircleProps>();
 <template>
   <div
     class="w-[15.7rem] h-60 rounded-full blur-[15rem] -z-10"
-    :class="`${props.color}`"
+    :class="`${color}`"
   />
 </template>
