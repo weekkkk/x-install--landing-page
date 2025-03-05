@@ -64,7 +64,7 @@
       class="absolute left-[63.25rem] right-[19rem] top-[12.2rem] !w-[13.75rem] !h-[13.75rem]"
     />
     <NuxtImg
-      src="/images/grid.png"
+      src="/images/grid.webp"
       alt="gridBackground"
       class="absolute top-0 left-0 -z-20 w-full max-w-none"
     />
