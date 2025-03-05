@@ -1,7 +1,8 @@
 export type UiPriceCardProps = {
-  serviceTitle: string,
+  service: string,
+  serviceAccent: string,
   serviceDescription: string,
   guarantees: string[],
-  price?: number
+  price?: string
   isUnitPrice?: boolean
 }
