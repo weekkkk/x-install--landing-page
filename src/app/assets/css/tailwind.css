@@ -14,20 +14,10 @@
   ::-webkit-scrollbar {
     width: 0;
   }
+
   .moving-element {
-    animation: move linear forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-  }
-  @keyframes move {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    /* transition: transform 0.1s linear; */
+    /* will-change: transform; */
   }
 }
 
