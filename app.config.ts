@@ -67,5 +67,8 @@ export default defineAppConfig({
         },
       },
     },
+    accordion: {
+      
+    }
   },
 });
