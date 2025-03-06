@@ -137,6 +137,14 @@ const currentComponents = computed(() =>
 </script>
 <template>
   <section class="flex flex-col items-center">
+    <div class="relative">
+      <UiBlurCircle
+        color="bg-turquoise-100"
+        class="absolute top-8 right-[20rem] !w-30 !h-60"
+      />
+      <UiBlurCircle color="bg-turquoise-100" class="absolute left-[20rem]" />
+    </div>
+    <!-- <UiBlurCircle color="bg-turquoise-100" /> -->
     <div class="w-[36.8rem] flex flex-col justify-center items-center">
       <h2
         class="text-center inline-block text-6xl font-bold bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text mb-6"
