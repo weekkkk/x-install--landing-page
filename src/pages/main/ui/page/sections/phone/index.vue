@@ -33,6 +33,10 @@
       src="/images/application2.webp"
       class="moving-element w-[23.8rem] h-[5.6rem] absolute top-[79.15rem] left-[36.6rem] z-20"
     />
+    <UiBlurCircle
+      color="bg-turquoise-100"
+      class="moving-element absolute top-[73.65rem] left-[40.96rem] -z-[5]"
+    />
     <NuxtImg
       src="/images/graph.webp"
       class="w-full absolute left-[.55rem] top-[66.05rem] -z-10"
