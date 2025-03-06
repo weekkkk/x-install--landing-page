@@ -6,7 +6,7 @@
     />
     <NuxtImg
       src="/images/screen.webp"
-      class="absolute top-[59.65rem] left-[37.96rem] w-[21.5rem] h-[46.6rem] rounded-tl-[2.5rem] rounded-tr-[2.5rem] rounded-bl-[3rem] rounded-br-[3rem]"
+      class="absolute moving-element top-[59.65rem] left-[37.96rem] w-[21.5rem] h-[46.6rem] rounded-tl-[2.5rem] rounded-tr-[2.5rem] rounded-bl-[3rem] rounded-br-[3rem]"
     />
     <NuxtImg
       src="/images/application1.webp"
