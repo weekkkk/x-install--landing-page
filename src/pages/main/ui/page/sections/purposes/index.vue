@@ -45,7 +45,7 @@ const keyFiguresList: KeyFigures[] = [
     <div
       class="mt-[5.5rem] flex gap-[11.4rem] justify-between ml-[4.7rem] mr-[5.7rem]"
     >
-      <UiKeyFigures
+      <KeyFiguresWidget
         v-for="keyFigure in keyFiguresList"
         :key="keyFigure.Id"
         :Title="keyFigure.Title"
