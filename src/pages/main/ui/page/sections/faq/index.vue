@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useAppConfig;
+</script>
 <template>
   <section>
     <div class="flex flex-col items-center">
@@ -7,7 +9,13 @@
       >
         FAQ
       </h2>
-      
+      <div class="bg-">
+        <NuxtImg
+          src="/images/gradientsprice.webp"
+          alt="gridBackground"
+          class="absolute w-[11.15rem] h-[11.15rem] max-w-none"
+        />
+      </div>
     </div>
   </section>
 </template>
