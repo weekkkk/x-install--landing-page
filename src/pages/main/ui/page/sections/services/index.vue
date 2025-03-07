@@ -1,4 +1,15 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import type { ServiceItemType } from "./types";
+
+const serviceItemList: ServiceItemType[] = [
+  {
+    Id: Date.now(),
+    ImgPath: "/images/magnifier.webp",
+    Title: "Профессиональный аудит",
+    SubTitle: "вашего приложения",
+  },
+];
+</script>
 
 <template>
   <div class="relative">
@@ -24,7 +35,14 @@
       </p>
     </div>
     <div>
-      <ServiceCardWidget class="mt-20" />
+      <ServiceCardWidget
+        v-for="item in serviceItemList"
+        :key="item.Id"
+        :ImgPath="item.ImgPath"
+        :Title="item.Title"
+        :SubTitle="item.SubTitle"
+        class="mt-20"
+      />
     </div>
   </div>
 </template>
