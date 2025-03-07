@@ -11,6 +11,11 @@ export const iosServices: UiPriceCardProps[] = [
     ],
     price: "0.24",
     isUnitPrice: true,
+    md: {
+      service: `Мотивированные\nустановки в AppStore`,
+      serviceAccent: `Мотивированные\nустановки`,
+      serviceDescription: `Выведение вашего\nприложения в топ выдачи\nпо ключевым словам.`
+    }
   },
   {
     service: `Разработка\nприложений на IOS`,
@@ -19,6 +24,11 @@ export const iosServices: UiPriceCardProps[] = [
     guarantees: ["Индивидуальный подход"],
     price: "2999",
     isUnitPrice: false,
+    md: {
+      service: `Разработка\nприложений на IOS`,
+      serviceAccent: `приложений`,
+      serviceDescription: `Продажа готовых приложений\nдля арбитража траффика\nили разработка под заказ`
+    }
   },
   {
     service: `Продвижение\nInApp`,
@@ -31,11 +41,16 @@ export const iosServices: UiPriceCardProps[] = [
     ],
     price: "5000",
     isUnitPrice: false,
+    md: {
+      service: `Продвижение\nInApp`,
+      serviceAccent: `InApp`,
+      serviceDescription: `Разработка стратегии для\nпродвижения с помощью\nрекламных площадок Unity,\nIntegral и другие`
+    }
   },
   {
     service: `Продвижение\nGoogle (UAC)`,
     serviceAccent: `Google (UAC)`,
-    serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google `,
+    serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google`,
     guarantees: [
       "Разработка шаблонов",
       "Креативов , Текстов",
@@ -43,6 +58,11 @@ export const iosServices: UiPriceCardProps[] = [
     ],
     price: "10,000",
     isUnitPrice: false,
+    md: {
+      service: `Продвижение\nGoogle (UAC)`,
+      serviceAccent: `Google (UAC)`,
+      serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google`,
+    }
   },
   {
     service: `Гарантированное\nпродвижение\nв топ по ключу`,
@@ -53,6 +73,11 @@ export const iosServices: UiPriceCardProps[] = [
       "Быстрое продвижение",
       "Уникальная система продвижения",
     ],
+    md: {
+      service: `Гарантированное\nпродвижение`,
+      serviceAccent: `Гарантированное`,
+      serviceDescription: `Стоимость формируется\nпо результатам оценки\nкаждого отдельного кейса`,
+    }
   },
   {
     service: `Бизнес\nсотрудничество`,
@@ -63,5 +88,10 @@ export const iosServices: UiPriceCardProps[] = [
       "Мы инвестируем в ваше развитие",
       "Мы заинтересованы в успешном результате",
     ],
+        md: {
+          service: `Бизнес\nсотрудничество`,
+          serviceAccent: `Бизнес`,
+          serviceDescription: `Мы открыты\nк взаимовыгодному\nсотрудничеству.`,
+    }
   },
 ];
