@@ -1,41 +1,135 @@
 <script setup lang="ts">
-const { setLocale } = useI18n()
+const { setLocale } = useI18n();
 
+/**Состояние шторки */
+const isOpenDrawer = ref<boolean>(false);
 
-const items = [{
-    label: 'EN',
-}, {
-    label: 'RU',
+/**Выбранный язык */
+const selectedLang = ref<number>(1);
 
-}]
+/**Путь фотки*/
+const imgPath = computed<string>(() => {
+  return isOpenDrawer.value ? "xi-i-burger-open" : "xi-i-burger";
+});
+
+const itemsLang = [
+  {
+    label: "EN",
+  },
+  {
+    label: "RU",
+  },
+];
 
 /**Переключение локализации */
 const switchLocalization = (index: number) => {
-    switch (index) {
-        case 0:
-            setLocale('en')
-            break;
-        case 1:
-            setLocale('ru')
-            break;
-    }
-}
+  selectedLang.value = index;
+  switch (index) {
+    case 0:
+      setLocale("en");
+      break;
+    case 1:
+      setLocale("ru");
+      break;
+  }
+};
+
+/**Изменение состояния шторки */
+const switchStateDrawer = () => {
+  isOpenDrawer.value = !isOpenDrawer.value;
+};
+
+// Функция для проверки ширины экрана
+const checkScreenSize = () => {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    isOpenDrawer.value = false;
+  }
+};
+
+onMounted(() => {
+  checkScreenSize();
+  window.addEventListener("resize", checkScreenSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", checkScreenSize);
+});
 </script>
 <template>
-    <header class="flex justify-between items-center">
-        <div>
-            <UIcon name="xi-i-logo" alt="Logo" class="w-[9.25rem] h-9" />
-        </div>
-        <div class="text-white flex gap-20 mt-[0.5rem] ml-[12rem] w-[28.3rem]">
-            <UButton variant="link" class="p-0 text-lg leading-[1.4915rem] mr-[0.1rem]">{{ $t('aboutUs') }}</UButton>
-            <UButton variant="link" class="p-0 text-lg leading-[1.4915rem] mr-[0.3rem]">{{ $t('services') }}</UButton>
-            <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">{{ $t('price') }}</UButton>
-            <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">DSP</UButton>
-        </div>
-        <div class="flex items-center gap-4">
-            <UTabs :default-index="1" @change="switchLocalization" :items="items" class="w-[8.5rem]"
-                :ui="{ tab: 'h-[3.2rem]' }" />
-            <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg">Связаться</UButton>
-        </div>
-    </header>
+  <header class="flex justify-between items-center">
+    <div class="z-20">
+      <UIcon
+        name="xi-i-logo"
+        alt="Logo"
+        class="w-[9.25rem] h-9 max-md:w-24 max-md:h-6"
+      />
+    </div>
+    <div
+      class="text-white flex gap-20 mt-[0.5rem] ml-[12rem] w-[28.3rem] max-md:hidden"
+    >
+      <UButton
+        variant="link"
+        class="p-0 text-lg leading-[1.4915rem] mr-[0.1rem]"
+        >{{ $t("aboutUs") }}</UButton
+      >
+      <UButton
+        variant="link"
+        class="p-0 text-lg leading-[1.4915rem] mr-[0.3rem]"
+        >{{ $t("services") }}</UButton
+      >
+      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">{{
+        $t("price")
+      }}</UButton>
+      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]"
+        >DSP</UButton
+      >
+    </div>
+
+    <div class="flex items-center gap-4 max-md:hidden">
+      <UTabs
+        v-model="selectedLang"
+        @change="switchLocalization"
+        :items="itemsLang"
+        class="w-[8.5rem]"
+        :ui="{ tab: 'h-[3.2rem]' }"
+      />
+      <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg"
+        >Связаться</UButton
+      >
+    </div>
+    <UIcon
+      :name="imgPath"
+      @click="switchStateDrawer"
+      class="md:hidden z-10 w-[1.2rem] h-[1.2rem] absolute top-[1.65rem] right-[0.7rem]"
+    />
+
+    <div
+      v-if="isOpenDrawer"
+      class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
+    >
+      <div class="flex flex-col items-center gap-2 text-2xl">
+        <UButton variant="link" class="max-md:text-[1.75rem]">{{
+          $t("home")
+        }}</UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">{{
+          $t("aboutUs")
+        }}</UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">{{
+          $t("services")
+        }}</UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">{{
+          $t("price")
+        }}</UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
+      </div>
+      <div class="absolute bottom-[2.6rem] w-[17.65rem] h-14">
+        <UTabs
+          v-model="selectedLang"
+          :items="itemsLang"
+          @change="switchLocalization"
+          class="w-[-webkit-fill-available]"
+        />
+      </div>
+    </div>
+  </header>
 </template>
