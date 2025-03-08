@@ -27,7 +27,12 @@ export const iosServices: UiPriceCardProps[] = [
     md: {
       service: `Разработка\nприложений на IOS`,
       serviceAccent: `приложений`,
-      serviceDescription: `Продажа готовых приложений\nдля арбитража траффика\nили разработка под заказ`
+      serviceDescription: `Продажа готовых приложений\nдля арбитража траффика\nили разработка под заказ`,
+      guarantees: [
+        'Любые источники трафика',
+        'Индивидуальный подход',
+        'Быстрое получение результата'
+      ]
     }
   },
   {
@@ -66,7 +71,7 @@ export const iosServices: UiPriceCardProps[] = [
   },
   {
     service: `Гарантированное\nпродвижение\nв топ по ключу`,
-    serviceAccent: `Гарантированное\nпродвижение`,
+    serviceAccent: `Гарантированное\nпродвижение\n`,
     serviceDescription: `Стоимость формируется по результатам\nоценки каждого отдельного кейса`,
     guarantees: [
       "Оплата за результат",
@@ -75,7 +80,7 @@ export const iosServices: UiPriceCardProps[] = [
     ],
     md: {
       service: `Гарантированное\nпродвижение`,
-      serviceAccent: `Гарантированное`,
+      serviceAccent: `Гарантированное\n`,
       serviceDescription: `Стоимость формируется\nпо результатам оценки\nкаждого отдельного кейса`,
     }
   },

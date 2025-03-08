@@ -2,8 +2,7 @@
 import type { UiPriceCardProps } from "./types";
 import { useMediaQuery } from "@vueuse/core";
 
-const isLargeScreen = useMediaQuery("(min-width: 1024px)");
-const isDesktop = useMediaQuery("(min-width: 769px)");
+const isLargeScreen = useMediaQuery("(min-width: 768px)");
 
 const props = defineProps<UiPriceCardProps>();
 const textParts = computed(() => {
@@ -18,6 +17,11 @@ const textParts = computed(() => {
 
   const [before, after] = title.split(accent);
   return { before, after, accent };
+});
+const _guarantees = computed(() => {
+  return isLargeScreen.value
+    ? props.guarantees
+    : props.md.guarantees ?? props.guarantees;
 });
 </script>
 
@@ -51,7 +55,7 @@ const textParts = computed(() => {
         class="max-md:text-base flex flex-col gap-y-6 max-md:gap-y-4 text-xl font-semibold"
       >
         <li
-          v-for="(item, index) in guarantees"
+          v-for="(item, index) in _guarantees"
           :key="index"
           class="flex items-center space-x-3"
         >
