@@ -1,2 +1,2 @@
-export type { keyFiguresProps } from "./props";
-export type { keyFigureList } from "./type";
+export type { KeyFiguresProps } from "./props";
+export type { KeyFigureList } from "./type";
