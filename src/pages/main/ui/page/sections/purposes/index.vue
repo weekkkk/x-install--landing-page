@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import type { keyFigureList } from "~/src/shared/ui/key-figures/types";
+import type { KeyFigureList } from "~/src/shared/ui/key-figures/types";
 
 /**Ключевые показатели */
-const keyFiguresList: keyFigureList[] = [
+const keyFiguresList: KeyFigureList[] = [
   {
-    Id: 1,
-    Title: "20K+",
-    Paragraph: "Загрузок В День",
+    id: 1,
+    title: "20K+",
+    paragraph: "Загрузок В День",
   },
   {
-    Id: 2,
-    Title: "170+",
-    Paragraph: "Стран",
+    id: 2,
+    title: "170+",
+    paragraph: "Стран",
   },
   {
-    Id: 3,
-    Title: "2,5M+",
-    Paragraph: "Активных Пользователей",
+    id: 3,
+    title: "2,5M+",
+    paragraph: "Активных Пользователей",
   },
   {
-    Id: 4,
-    Title: "700+",
-    Paragraph: "Клиентов",
+    id: 4,
+    title: "700+",
+    paragraph: "Клиентов",
   },
 ];
 </script>
@@ -51,9 +51,9 @@ const keyFiguresList: keyFigureList[] = [
       >
         <UiKeyFigures
           v-for="keyFigure in keyFiguresList"
-          :key="keyFigure.Id"
-          :Title="keyFigure.Title"
-          :Paragraph="keyFigure.Paragraph"
+          :key="keyFigure.id"
+          :title="keyFigure.title"
+          :paragraph="keyFigure.paragraph"
         />
       </div>
     </div>

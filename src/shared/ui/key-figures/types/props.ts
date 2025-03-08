@@ -1,4 +1,4 @@
-export type keyFiguresProps = {
-  Title: string;
-  Paragraph: string;
+export type KeyFiguresProps = {
+  title: string;
+  paragraph: string;
 };
