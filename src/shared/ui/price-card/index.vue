@@ -2,13 +2,15 @@
 import type { UiPriceCardProps } from "./types";
 import { useMediaQuery } from "@vueuse/core";
 
-const isMobile = useMediaQuery("(max-width: 768px)");
+const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 const isDesktop = useMediaQuery("(min-width: 769px)");
 
 const props = defineProps<UiPriceCardProps>();
 const textParts = computed(() => {
-  const title = isMobile ? props.md.service : props.service;
-  const accent = isMobile ? props.md.serviceAccent : props.serviceAccent;
+  const title = isLargeScreen.value ? props.service : props.md.service;
+  const accent = isLargeScreen.value
+    ? props.serviceAccent
+    : props.md.serviceAccent;
 
   if (!title.includes(accent)) {
     return { before: title, after: "" }; // Если акцентное слово отсутствует в заголовке
@@ -41,7 +43,7 @@ const textParts = computed(() => {
       <p
         class="max-md:text-base text-xl text-mediumGray leading-[2.01rem] whitespace-break-spaces"
       >
-        {{ isMobile ? md.serviceDescription : serviceDescription }}
+        {{ isLargeScreen ? serviceDescription : md.serviceDescription }}
       </p>
     </div>
     <div class="max-md:w-full w-[35%] flex flex-col justify-center">
