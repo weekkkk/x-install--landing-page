@@ -39,24 +39,49 @@ const switchStateDrawer = () => {
   isOpenDrawer.value = !isOpenDrawer.value;
 };
 
-// Функция для проверки ширины экрана
-const checkScreenSize = () => {
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    isOpenDrawer.value = false;
+const isHeaderFixed = ref<boolean>(false);
+const isHeaderVisible = ref<boolean>(true);
+const lastScrollY = ref<number>(0);
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY === 0) {
+    isHeaderFixed.value = false;
+    isHeaderVisible.value = true;
+  } else {
+    isHeaderFixed.value = currentScrollY < lastScrollY.value;
   }
+
+  lastScrollY.value = currentScrollY;
 };
 
+watch(isOpenDrawer, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = "hidden"; // Отключаем прокрутку страницы
+  } else {
+    document.body.style.overflow = ""; // Включаем обратно
+  }
+});
+
 onMounted(() => {
-  checkScreenSize();
-  window.addEventListener("resize", checkScreenSize);
+  window.addEventListener("scroll", handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("resize", checkScreenSize);
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 <template>
-  <header class="flex justify-between items-center">
+  <header
+    class="flex justify-between items-center"
+    :class="[
+      'flex justify-between items-center w-full transition-all duration-300',
+      isHeaderFixed
+        ? 'fixed top-0 left-0 pl-10 pr-8 py-[2.35rem] max-md:px-4 max-md:py-6'
+        : 'block',
+    ]"
+  >
     <div class="z-20">
       <UIcon
         name="xi-i-logo"
@@ -100,7 +125,7 @@ onUnmounted(() => {
     <UIcon
       :name="imgPath"
       @click="switchStateDrawer"
-      class="md:hidden z-10 w-[1.2rem] h-[1.2rem] absolute top-[1.65rem] right-[0.7rem]"
+      class="md:hidden z-10 w-[1.2rem] h-[1.2rem]"
     />
 
     <div
