@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { KeyFigureList } from "~/src/shared/ui/key-figures/types";
+import type { KeyFigureList } from "./consts";
 
 /**Ключевые показатели */
 const keyFiguresList: KeyFigureList[] = [
