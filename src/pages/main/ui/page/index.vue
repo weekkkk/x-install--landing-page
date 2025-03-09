@@ -1,7 +1,8 @@
 <template>
-  <LayoutHeaderWidget />
-  <MainPageSectionsWelcome class="mt-[10.65rem] h-[52.55rem]" />
+  <!-- <LayoutHeaderWidget /> -->
+  <!-- <MainPageSectionsWelcome class="mt-[10.65rem] h-[52.55rem]" /> -->
   <MainPageSectionsPhone class="overflow-hidden" />
+  <div class="h-[800px]"></div>
 </template>
 
 <script setup>
