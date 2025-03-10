@@ -7,8 +7,6 @@
 </template>
 
 <script setup>
-import { MainPageSectionsFeedBackSection } from "#components";
-
 useHead({
   title: "X-Install",
 });
