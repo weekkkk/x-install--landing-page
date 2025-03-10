@@ -59,7 +59,6 @@
     </div>
     <UiBlurCircle
       color="bg-turquoise-100"
-<<<<<<< HEAD
       class="absolute left-[2.6rem] top-[15.5rem] max-md:w-[5.45rem] max-md:h-[5.7rem] max-md:top-[11.5rem] max-md:left-[-6.4rem]"
     />
     <UiBlurCircle
@@ -73,30 +72,11 @@
     <UiBlurCircle
       color="bg-violet"
       class="absolute left-[63.25rem]  max-md:left-[13.85rem] top-[12.2rem] w-[13.75rem] h-[13.75rem] max-md:w-[5.45rem] max-md:h-[5.7rem]"
-=======
-      class="left-[2.6rem] top-[15.5rem]"
-    />
-    <UiBlurCircle
-      color="bg-turquoise-100"
-      class="left-[75.35rem] right-[2.4rem] top-[29.15rem] w-[18.25rem] h-[18.25rem]"
-    />
-    <UiBlurCircle
-      color="bg-violet"
-      class="left-[9.3rem] top-[35.3rem] !w-[12.5rem] !h-[12.5rem]"
-    />
-    <UiBlurCircle
-      color="bg-violet"
-      class="left-[63.25rem] right-[19rem] top-[12.2rem] !w-[13.75rem] !h-[13.75rem]"
->>>>>>> 5e658daa69c85d490c115ecb08e0e55f002be101
     />
     <NuxtImg
       src="/images/grid.webp"
       alt="gridBackground"
-<<<<<<< HEAD
       class="absolute top-0 max-md:top-[15.5rem] left-0 -z-20 w-full max-w-none"
-=======
-      class="top-0 left-0 -z-20 w-full max-w-none"
->>>>>>> 5e658daa69c85d490c115ecb08e0e55f002be101
     />
   </div>
 </template>
