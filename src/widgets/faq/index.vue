@@ -55,7 +55,7 @@ const items = computed(() => {
             >
             <UIcon
               variant="ghost"
-              :name="'i-custom-arrow-down'"
+              :name="'xi-i-arrow-down'"
               class="transition-transform duration-300 p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 max-md:mr-6"
               :class="{ 'rotate-180 max-md:self-start': open }"
             />

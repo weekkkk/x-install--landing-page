@@ -19,20 +19,3 @@
 
 @layer components {
 }
-
-@layer utilities {
-  .i-custom-arrow-down {
-    background-image: url("../icons/arrow-down.svg");
-    width: 3rem;
-    height: 3rem;
-    display: inline-block;
-    background-size: cover;
-  }
-  .i-custom-arrow-up {
-    background-image: url("../icons/arrow-up.svg");
-    width: 3rem;
-    height: 3rem;
-    display: inline-block;
-    background-size: cover;
-  }
-}
