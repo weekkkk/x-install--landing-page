@@ -1,6 +1,7 @@
 <template>
   <LayoutHeaderWidget />
-  <div class="h-[120rem]">sdcsdc</div>
+  <MainPageSectionsWelcome class="mt-[10.65rem] h-[52.55rem]" />
+  <PriceListWidget />
 </template>
 
 <script setup>
