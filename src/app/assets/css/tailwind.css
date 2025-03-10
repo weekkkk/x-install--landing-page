@@ -6,6 +6,7 @@
   :root {
     font-family: "sf-pro-display";
     font-size: 1.041666666666667vw;
+    @apply max-md:text-[20px];
   }
   body {
     @apply bg-black;
@@ -17,4 +18,21 @@
 }
 
 @layer components {
+}
+
+@layer utilities {
+  .i-custom-arrow-down {
+    background-image: url("../icons/arrow-down.svg");
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    background-size: cover;
+  }
+  .i-custom-arrow-up {
+    background-image: url("../icons/arrow-up.svg");
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    background-size: cover;
+  }
 }

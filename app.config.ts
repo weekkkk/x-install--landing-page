@@ -68,7 +68,21 @@ export default defineAppConfig({
       },
     },
     accordion: {
-      
-    }
+      wrapper: "w-full flex flex-col gap-y-4",
+      container: "bg-jetBlack pl-10 pr-10 pb-[3.2rem] pt-[3.2rem] rounded-[2.5rem] min-h-[10rem] max-md:min-h-20 max-md:pl-6 max-md:pr-0 max-md:py-0   flex flex-col justify-center",
+      item: {
+        base: '',
+        size: 'text-xl max-md:text-base',
+        color: 'text-mediumGray leading-[2rem] whitespace-pre-line',
+        padding: 'pt-3 -mb-[0.7rem] max-md:mb-0 max-md:pb-[2.95rem]',
+      },
+      content: "text-mediumGray text-xl",
+      defaultOpen: false,
+      multiple: true,
+      default: {
+        class: 'w-full h-full p-0',
+        openIcon: 'i-custom-arrow-down',
+      }
+    },
   },
 });
