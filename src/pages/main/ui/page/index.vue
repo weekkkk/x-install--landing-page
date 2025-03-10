@@ -5,6 +5,7 @@
   <MainPageSectionsServices class="mt-[16.5rem]" />
   <PriceListWidget />
   <SocialMediaWidget />
+  <LayoutFooterWidget />
 </template>
 
 <script setup>
