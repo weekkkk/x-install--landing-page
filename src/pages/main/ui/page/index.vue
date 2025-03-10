@@ -9,3 +9,4 @@ useHead({
   title: "X-Install",
 });
 </script>
+
