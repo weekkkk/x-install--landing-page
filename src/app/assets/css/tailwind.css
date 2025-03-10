@@ -8,7 +8,6 @@
     font-size: 1.041666666666667vw;
     @apply max-md:text-[20px];
   }
-
   body {
     @apply bg-black;
   }
