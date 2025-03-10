@@ -19,4 +19,7 @@
 }
 
 @layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text;
+  }
 }
