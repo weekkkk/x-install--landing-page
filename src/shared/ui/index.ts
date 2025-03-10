@@ -1,0 +1,1 @@
+export type { UiPriceCardProps } from './price-card'
