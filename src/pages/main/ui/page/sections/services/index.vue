@@ -12,12 +12,12 @@
     />
     <div class="text-center">
       <h1
-        class="text-6xl max-md:text-[1.75rem] max-md:leading-[100%] leading-[100%] font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
+        class="text-6xl max-md:text-[1.75rem] max-md:leading-[1.2] font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
       >
         Услуги
       </h1>
       <p
-        class="text-xl max-md:text-base max-md:leading-[100%] leading-[100%] text-mediumGray font-medium mt-[2.23rem] max-md:mt-4"
+        class="text-xl max-md:text-base max-md:leading-[1.2] text-mediumGray font-medium mt-6 max-md:mt-4"
       >
         Внимательно относимся к каждому клиенту,<br class="max-md:hidden" />
         оказывая качественные услуги по минимальной цене

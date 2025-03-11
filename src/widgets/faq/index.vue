@@ -9,7 +9,7 @@ const items = computed(() => {
 });
 </script>
 <template>
-  <section class="mt-[16.5rem]">
+  <section class="mt-[16.5rem] max-md:mt-[10rem]">
     <div class="flex flex-col items-center">
       <div class="relative w-full flex flex-col items-center">
         <h2

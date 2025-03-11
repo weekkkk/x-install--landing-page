@@ -39,30 +39,22 @@ const switchStateDrawer = () => {
   isOpenDrawer.value = !isOpenDrawer.value;
 };
 
-const isHeaderFixed = ref(false);
 const isHeaderVisible = ref(true);
 const lastScrollY = ref(0);
 
-const handleScroll = () => {
+const handleScroll = (e: Event) => {
+  console.log(e);
+
   const currentScrollY = window.scrollY;
 
   if (currentScrollY === 0) {
-    isHeaderFixed.value = false;
     isHeaderVisible.value = true;
   } else {
-    isHeaderFixed.value = currentScrollY < lastScrollY.value;
+    isHeaderVisible.value = currentScrollY < lastScrollY.value;
   }
 
   lastScrollY.value = currentScrollY;
 };
-
-watch(isOpenDrawer, (newValue) => {
-  if (newValue) {
-    document.body.style.overflow = "hidden"; // Отключаем прокрутку страницы
-  } else {
-    document.body.style.overflow = ""; // Включаем обратно
-  }
-});
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
@@ -74,23 +66,22 @@ onUnmounted(() => {
 </script>
 <template>
   <header
-    class="flex justify-between items-center w-full transition-all duration-300 z-40"
+    class="flex justify-between items-center w-full transition-all duration-300 z-40 fixed top-0 inset-x-0 px-10 py-[2.35rem] max-md:px-4 max-md:py-6"
     :class="[
       {
-        'fixed top-0 left-0 pl-10 pr-8 py-[2.35rem] max-md:px-4 max-md:py-6':
-          isHeaderFixed,
+        '-translate-y-full': !isHeaderVisible,
       },
     ]"
   >
-    <div class="z-20">
+    <div class="z-20 flex w-full">
       <UIcon
         name="xi-i-logo"
         alt="Logo"
-        class="w-[9.25rem] h-9 max-md:w-24 max-md:h-6"
+        class="w-[8.329rem] h-9 max-md:w-24 max-md:h-6 text-left justify-start"
       />
     </div>
     <div
-      class="text-white flex gap-20 mt-[0.5rem] ml-[12rem] w-[28.3rem] max-md:hidden"
+      class="text-white flex justify-center gap-20 mt-[0.5rem] max-md:hidden w-full"
     >
       <UButton
         variant="link"
@@ -112,7 +103,7 @@ onUnmounted(() => {
       </UButton>
     </div>
 
-    <div class="flex items-center gap-4 max-md:hidden">
+    <div class="flex justify-end items-center gap-4 max-md:hidden w-full">
       <UTabs
         v-model="selectedLang"
         @change="switchLocalization"
