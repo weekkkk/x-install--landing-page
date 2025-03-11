@@ -15,11 +15,6 @@
   ::-webkit-scrollbar {
     width: 0;
   }
-
-  .moving-element {
-    /* transition: transform 0.1s linear; */
-    /* will-change: transform; */
-  }
 }
 
 @layer components {
