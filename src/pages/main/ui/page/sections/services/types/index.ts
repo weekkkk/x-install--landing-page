@@ -1,1 +1,1 @@
-export type { ServiceItemType } from "./type";
+export type { ServiceItemType } from "./item";
