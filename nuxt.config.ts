@@ -27,7 +27,11 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "stylesheet",
-          href: "/fonts/sf-pro-display/sf-pro-display.style.css",
+          href: `${
+            process.env.NODE_ENV === "production"
+              ? "/x-install--landing-page"
+              : ""
+          }/fonts/sf-pro-display/sf-pro-display.style.css`,
         },
       ],
     },
