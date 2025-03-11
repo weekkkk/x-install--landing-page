@@ -2,10 +2,10 @@
 const { setLocale } = useI18n();
 
 /**Состояние шторки */
-const isOpenDrawer = ref<boolean>(false);
+const isOpenDrawer = ref(false);
 
 /**Выбранный язык */
-const selectedLang = ref<number>(1);
+const selectedLang = ref(1);
 
 /**Путь фотки*/
 const imgPath = computed<string>(() => {
@@ -39,9 +39,9 @@ const switchStateDrawer = () => {
   isOpenDrawer.value = !isOpenDrawer.value;
 };
 
-const isHeaderFixed = ref<boolean>(false);
-const isHeaderVisible = ref<boolean>(true);
-const lastScrollY = ref<number>(0);
+const isHeaderFixed = ref(false);
+const isHeaderVisible = ref(true);
+const lastScrollY = ref(0);
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
@@ -74,12 +74,12 @@ onUnmounted(() => {
 </script>
 <template>
   <header
-    class="flex justify-between items-center"
+    class="flex justify-between items-center w-full transition-all duration-300"
     :class="[
-      'flex justify-between items-center w-full transition-all duration-300',
-      isHeaderFixed
-        ? 'fixed top-0 left-0 pl-10 pr-8 py-[2.35rem] max-md:px-4 max-md:py-6'
-        : 'block',
+      {
+        'fixed top-0 left-0 pl-10 pr-8 py-[2.35rem] max-md:px-4 max-md:py-6':
+          isHeaderFixed,
+      },
     ]"
   >
     <div class="z-20">
@@ -95,19 +95,21 @@ onUnmounted(() => {
       <UButton
         variant="link"
         class="p-0 text-lg leading-[1.4915rem] mr-[0.1rem]"
-        >{{ $t("aboutUs") }}</UButton
       >
+        {{ $t("aboutUs") }}
+      </UButton>
       <UButton
         variant="link"
         class="p-0 text-lg leading-[1.4915rem] mr-[0.3rem]"
-        >{{ $t("services") }}</UButton
       >
-      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">{{
-        $t("price")
-      }}</UButton>
-      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]"
-        >DSP</UButton
-      >
+        {{ $t("services") }}
+      </UButton>
+      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">
+        {{ $t("price") }}
+      </UButton>
+      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">
+        DSP
+      </UButton>
     </div>
 
     <div class="flex items-center gap-4 max-md:hidden">
@@ -118,9 +120,9 @@ onUnmounted(() => {
         class="w-[8.5rem]"
         :ui="{ tab: 'h-[3.2rem]' }"
       />
-      <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg"
-        >Связаться</UButton
-      >
+      <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg">
+        Связаться
+      </UButton>
     </div>
     <UIcon
       :name="imgPath"
@@ -133,18 +135,18 @@ onUnmounted(() => {
       class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
     >
       <div class="flex flex-col items-center gap-2 text-2xl">
-        <UButton variant="link" class="max-md:text-[1.75rem]">{{
-          $t("home")
-        }}</UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">{{
-          $t("aboutUs")
-        }}</UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">{{
-          $t("services")
-        }}</UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">{{
-          $t("price")
-        }}</UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">
+          {{ $t("home") }}
+        </UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">
+          {{ $t("aboutUs") }}
+        </UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">
+          {{ $t("services") }}
+        </UButton>
+        <UButton variant="link" class="max-md:text-[1.75rem]">
+          {{ $t("price") }}
+        </UButton>
         <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
       </div>
       <div class="absolute bottom-[2.6rem] w-[17.65rem] h-14">

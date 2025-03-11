@@ -8,6 +8,9 @@
     font-size: 1.041666666666667vw;
     @apply max-md:text-[20px];
   }
+  ::-webkit-scrollbar {
+    width: 0;
+  }
   body {
     @apply bg-black;
   }
