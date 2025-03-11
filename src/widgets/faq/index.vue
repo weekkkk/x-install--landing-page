@@ -24,7 +24,7 @@ const items = computed(() => {
         />
         <NuxtImg
           v-if="isLargeScreen"
-          src="/images/faq-grid.svg"
+          src="/images/faq-grid-w.webp"
           alt="gridBackground"
           class="absolute w-[28rem] h-[28rem] max-w-none -top-[12.15rem] left-[30.65rem] -z-20"
         />
