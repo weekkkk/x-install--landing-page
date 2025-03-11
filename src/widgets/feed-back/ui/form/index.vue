@@ -32,12 +32,12 @@ const sendFormInfo = async () => {
   <div class="flex flex-col items-center">
     <div class="relative max-md:w-[17.65rem] text-center">
       <h1
-        class="text-6xl max-md:text-[1.75rem] leading-none font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
+        class="text-6xl max-md:text-[1.75rem] max-md:leading-[1.2] font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
       >
         Мы поможем!
       </h1>
       <p
-        class="text-mediumGray text-center max-md:text-base text-xl leading-[1.7rem] mt-8 max-md:mt-[1.2rem]"
+        class="text-mediumGray text-center max-md:text-base text-xl mt-6 max-md:mt-4"
       >
         Проконсультируем вас по поводу любого <br class="max-md:hidden" />
         предложения
@@ -91,7 +91,7 @@ const sendFormInfo = async () => {
       </UFormGroup>
       <UButton
         type="submit"
-        class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] max-md:mt-4 h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-10"
+        class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-6 max-md:mt-2"
       >
         Отправить
       </UButton>

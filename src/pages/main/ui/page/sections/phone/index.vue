@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[46.3rem] w-full">
+  <div class="h-[46.3rem]">
     <NuxtImg
       src="/images/body.webp"
       class="moving-element absolute max-md:left-[5.3545rem] max-md:w-[8.936rem] max-md:h-[18.301rem] w-[23.86rem] h-[48.7325rem] top-[58.65rem] left-[36.6rem] z-10"

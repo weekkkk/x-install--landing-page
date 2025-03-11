@@ -3,7 +3,7 @@
   <div class="flex items-center flex-col">
     <div class="w-[66.45rem] max-md:w-[17.65rem]">
       <div
-        class="text-8xl max-md:text-4xl max-md:leading-[3.395rem] leading-[7.16rem] text-center font-bold"
+        class="text-8xl max-md:text-4xl max-md:leading-[3.6rem] leading-[7.16rem] text-center font-bold"
       >
         Лучшее решение <br />
         <span class="max-md:hidden">в области</span>
@@ -14,7 +14,7 @@
         </span>
       </div>
       <div
-        class="text-xl max-md:text-base max-md:leading-[24.4px] leading-[1.79rem] font-medium text-center mt-14 max-md:mt-[1.2rem]"
+        class="text-xl max-md:text-base max-md:leading-[1.2] leading-[1.79rem] font-medium text-center mt-14 max-md:mt-4"
       >
         X-Instals —
         <span
@@ -71,7 +71,7 @@
     />
     <UiBlurCircle
       color="bg-violet"
-      class="absolute left-[63.25rem]  max-md:left-[13.85rem] top-[12.2rem] w-[13.75rem] h-[13.75rem] max-md:w-[5.45rem] max-md:h-[5.7rem]"
+      class="absolute left-[63.25rem] max-md:left-[13.85rem] top-[12.2rem] w-[13.75rem] h-[13.75rem] max-md:w-[5.45rem] max-md:h-[5.7rem]"
     />
     <NuxtImg
       src="/images/grid.webp"
