@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     preference: "dark",
   },
   app: {
+    baseURL: process.env.NODE_ENV === "production" ? "/x-install--landing-page/" : "/",
     head: {
       link: [
         {
