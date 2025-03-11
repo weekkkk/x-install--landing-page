@@ -8,7 +8,5 @@
 useHead({
   title: "X-Install",
 });
-  title: "X-Install",
-});
 </script>
 
