@@ -74,7 +74,7 @@ onUnmounted(() => {
 </script>
 <template>
   <header
-    class="flex justify-between items-center w-full transition-all duration-300"
+    class="flex justify-between items-center w-full transition-all duration-300 z-40"
     :class="[
       {
         'fixed top-0 left-0 pl-10 pr-8 py-[2.35rem] max-md:px-4 max-md:py-6':
