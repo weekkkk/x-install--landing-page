@@ -37,6 +37,8 @@ const switchLocalization = (index: number) => {
 /**Изменение состояния шторки */
 const switchStateDrawer = () => {
   isOpenDrawer.value = !isOpenDrawer.value;
+
+  document.body.classList.toggle("overflow-hidden", isOpenDrawer.value);
 };
 
 const isHeaderVisible = ref(true);
