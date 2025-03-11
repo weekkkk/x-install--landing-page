@@ -1,29 +1,5 @@
 <script setup lang="ts">
-import type { KeyFigureList } from "./consts";
-
-/**Ключевые показатели */
-const keyFiguresList: KeyFigureList[] = [
-  {
-    id: 1,
-    title: "20K+",
-    paragraph: "Загрузок В День",
-  },
-  {
-    id: 2,
-    title: "170+",
-    paragraph: "Стран",
-  },
-  {
-    id: 3,
-    title: "2,5M+",
-    paragraph: "Активных Пользователей",
-  },
-  {
-    id: 4,
-    title: "700+",
-    paragraph: "Клиентов",
-  },
-];
+import { keyFiguresList } from "./consts";
 </script>
 <template>
   <div class="max-md:flex max-md:justify-center">

@@ -1,1 +1,1 @@
-export type { KeyFigureList } from "./const";
+export { keyFiguresList } from "./const";
