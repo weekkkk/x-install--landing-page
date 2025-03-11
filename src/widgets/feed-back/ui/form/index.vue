@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import type { FeedbackDataDto } from "../../api/types";
+const inputName = ref("");
 
-const inputName = ref<string>("");
+const inputTelegram = ref("");
 
-const inputTelegram = ref<string>("");
+const textereaMessage = ref("");
 
-const textereaMessage = ref<string>("");
+const formState = {
+  name: inputName.value,
+  telegram: inputTelegram.value,
+  message: textereaMessage.value,
+};
 
 const sendFormInfo = async () => {
   try {
@@ -15,7 +19,6 @@ const sendFormInfo = async () => {
       message: textereaMessage.value,
     };
     await FeedbackService.sendFeedbackForm(data);
-    console.log(data);
   } catch (error) {
     console.error("Ошибка при отправке данных:", error);
   }
@@ -48,44 +51,50 @@ const sendFormInfo = async () => {
         class="absolute w-[28rem] max-md:top-[-5rem] max-md:w-[19.65rem] max-md:h-[19.65rem] h-[28rem] top-[-1rem]"
       />
     </div>
-    <div
+    <UForm
+      :state="formState"
+      @submit="sendFormInfo"
       class="flex flex-col items-center gap-4 max-md:gap-2 mt-20 max-md:mt-10"
     >
-      <UInput
-        placeholder="Имя"
-        v-model="inputName"
-        :ui="{
-          form: 'max-md:text-xs max-md:px-6 max-md:py-5 max-md:h-16',
-          rounded: '!rounded-2xl',
-        }"
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[3.9rem] leading-none"
-      />
-      <UInput
-        placeholder="Telegram"
-        v-model="inputTelegram"
-        :ui="{
-          form: 'max-md:text-xs max-md:px-6 max-md:py-5 rounded-2xl max-md:h-16',
-          rounded: '!rounded-2xl',
-        }"
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[3.9rem] leading-none"
-      />
-      <UTextarea
-        placeholder="Сообщение"
-        v-model="textereaMessage"
-        class="w-[45rem] max-md:w-[17.65rem] max-md:text-xs leading-none"
-        :ui="{
-          form: 'h-[12.5rem] max-md:h-[11.8rem] max-md:text-xs max-md:px-6 max-md:py-5 rounded-2xl',
-          rounded: '!rounded-2xl',
-        }"
-      />
-    </div>
-    <div class="">
+      <UFormGroup name="name">
+        <UInput
+          placeholder="Имя"
+          v-model="inputName"
+          :ui="{
+            form: 'max-md:text-xs max-md:px-6 max-md:py-5 max-md:h-16',
+            rounded: '!rounded-2xl',
+          }"
+          class="w-[45rem] max-md:w-[17.65rem] max-md:h-[3.9rem] leading-none"
+        />
+      </UFormGroup>
+      <UFormGroup name="telegram">
+        <UInput
+          placeholder="Telegram"
+          v-model="inputTelegram"
+          :ui="{
+            form: 'max-md:text-xs max-md:px-6 max-md:py-5 rounded-2xl max-md:h-16',
+            rounded: '!rounded-2xl',
+          }"
+          class="w-[45rem] max-md:w-[17.65rem] max-md:h-[3.9rem] leading-none"
+        />
+      </UFormGroup>
+      <UFormGroup name="message">
+        <UTextarea
+          placeholder="Сообщение"
+          v-model="textereaMessage"
+          class="w-[45rem] max-md:w-[17.65rem] max-md:text-xs leading-none"
+          :ui="{
+            form: 'h-[12.5rem] max-md:h-[11.8rem] max-md:text-xs max-md:px-6 max-md:py-5 rounded-2xl',
+            rounded: '!rounded-2xl',
+          }"
+        />
+      </UFormGroup>
       <UButton
-        @click="sendFormInfo"
+        type="submit"
         class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] max-md:mt-4 h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-10"
       >
         Отправить
       </UButton>
-    </div>
+    </UForm>
   </div>
 </template>
