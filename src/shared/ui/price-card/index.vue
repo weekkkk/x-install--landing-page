@@ -75,7 +75,7 @@ const _guarantees = computed(() => {
         class="text-mediumGray text-xl max-md:text-base"
         v-if="price && !isUnitPrice"
       >
-        от
+        {{ $t("pricePage.from") }}
       </p>
       <h3
         class="max-md:text-xl text-5xl font-bold bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
@@ -87,13 +87,13 @@ const _guarantees = computed(() => {
         v-if="price && isUnitPrice"
         class="text-xl text-mediumGray max-md:text-base"
       >
-        /шт
+        /{{ $t("pricePage.unit") }}
       </p>
       <h3
         class="text-[2rem] max-md:text-base text-right leading-[2.386rem] font-semibold bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
         v-if="!price"
       >
-        Индивидуальная стоимость
+        {{ $t("pricePage.customPrice") }}
       </h3>
     </div>
   </div>

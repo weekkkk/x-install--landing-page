@@ -14,13 +14,13 @@
       <h1
         class="text-6xl max-md:text-[1.75rem] max-md:leading-[1.2] font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
       >
-        Услуги
+        {{ $t("servicesPage.services") }}
       </h1>
       <p
         class="text-xl max-md:text-base max-md:leading-[1.2] text-mediumGray font-medium mt-6 max-md:mt-4"
       >
-        Внимательно относимся к каждому клиенту,<br class="max-md:hidden" />
-        оказывая качественные услуги по минимальной цене
+        {{ $t("servicesPage.clientCareBlock") }}<br class="max-md:hidden" />
+        {{ $t("servicesPage.qualityServicesBlock") }}
       </p>
     </div>
     <div
@@ -37,12 +37,12 @@
           <h1
             class="text-2xl max-md:text-lg max-md:leading-[1.45rem] font-semibold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
           >
-            Профессиональный <br class="md:hidden" />
-            аудит
+            {{ $t("servicesPage.professional") }} <br class="md:hidden" />
+            {{ $t("servicesPage.audit") }}
             <span class="text-white">
               <br class="max-md:hidden" />
-              вашего <br class="md:hidden" />
-              приложения</span
+              {{ $t("servicesPage.your") }} <br class="md:hidden" />
+              {{ $t("servicesPage.application") }}</span
             >
           </h1>
         </div>
@@ -75,7 +75,7 @@
           <h1
             class="text-2xl max-md:text-lg max-md:mt-[.25rem] max-md:leading-[100%] font-semibold"
           >
-            реклама
+            {{ $t("servicesPage.advertising") }}
           </h1>
         </div>
         <NuxtImg
@@ -121,7 +121,7 @@
           <h1
             class="text-2xl max-md:text-lg max-md:leading-[100%] font-semibold"
           >
-            реклама
+            {{ $t("servicesPage.advertising") }}
           </h1>
         </div>
         <NuxtImg
@@ -148,12 +148,12 @@
           <h1
             class="text-2xl max-md:text-lg max-md:leading-[100%] font-semibold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
           >
-            ASO оптимизация
+            ASO {{ $t("servicesPage.optimization") }}
           </h1>
           <h1
             class="text-2xl max-md:text-lg max-md:mt-[0.4rem] max-md:leading-[100%] font-semibold"
           >
-            для любого приложения
+            {{ $t("servicesPage.anyApplication") }}
           </h1>
         </div>
         <NuxtImg

@@ -1,25 +1,25 @@
 import type { KeyFigureList } from "../types";
 
 /**Ключевые показатели */
-export const keyFiguresList: KeyFigureList[] = [
+export const keyFiguresList = (t: (key: string) => string): KeyFigureList[] => [
   {
     id: 1,
     title: "20K+",
-    paragraph: "Загрузок В День",
+    paragraph: t("purposesPage.downloadsDay"),
   },
   {
     id: 2,
     title: "170+",
-    paragraph: "Стран",
+    paragraph: t("purposesPage.countries"),
   },
   {
     id: 3,
     title: "2,5M+",
-    paragraph: "Активных Пользователей",
+    paragraph: t("purposesPage.activeUsers"),
   },
   {
     id: 4,
     title: "700+",
-    paragraph: "Клиентов",
+    paragraph: t("purposesPage.clients"),
   },
 ];

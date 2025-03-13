@@ -1,71 +1,73 @@
-export const androidServices: UiPriceCardProps[] = [
+export const androidServices = (
+  t: (key: string) => string
+): UiPriceCardProps[] => [
   {
-    service: `Мотивированные\nустановки в Play Market`,
-    serviceAccent: `Мотивированные\nустановки`,
-    serviceDescription: `Выведение вашего приложения в топ выдачи\nпо ключевым словам. Стоимость указана\nза одну мотивированную установку по одному\nключевому слову`,
+    service: t("pricePage.service") + "Play Market",
+    serviceAccent: t("pricePage.serviceAccent"),
+    serviceDescription: t("pricePage.serviceDescription"),
     guarantees: [
-      "Любое количество установок",
-      "Быстрое продвижение",
-      "Низкая цена",
-      "Персональное консультирование",
+      t("pricePage.numberInstalls"),
+      t("pricePage.fastPromotion"),
+      t("pricePage.lowPrice"),
+      t("pricePage.personalConsulting"),
     ],
     price: "0.15",
     isUnitPrice: true,
     md: {
-      service: `Мотивированные\nустановки в Play Market`,
-      serviceAccent: `Мотивированные\nустановки`,
-      serviceDescription: `Выведение вашего\nприложения в топ выдачи\nпо ключевым словам.`
-    }
+      service: t("pricePage.service") + "Play Market",
+      serviceAccent: t("pricePage.serviceAccent"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile"),
+    },
   },
   {
-    service: `Разработка\nприложений на Android`,
-    serviceAccent: `приложений на Android`,
-    serviceDescription: `Продажа готовых приложений для арбитража\nтраффика или разработка под заказ`,
+    service: t("pricePage.service2") + "Android",
+    serviceAccent: t("pricePage.serviceAccentForAndroid"),
+    serviceDescription: t("pricePage.serviceDescription2"),
     guarantees: [
-      "Под любые источники трафика",
-      "Персональное консультирование",
-      "Быстрое получение результата",
+      t("pricePage.trafficSourcesAndroid"),
+      t("pricePage.personalConsulting"),
+      t("pricePage.resultsQuickly"),
     ],
     price: "2000",
     isUnitPrice: false,
     md: {
-      service: `Разработка\nприложений на Android`,
-      serviceAccent: `приложений`,
-      serviceDescription: `Продажа готовых приложений\nдля арбитража траффика\nили разработка под заказ`
-    }
+      service: t("pricePage.service2") + "Android",
+      serviceAccent: t("pricePage.serviceAccent2"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile2"),
+    },
   },
   {
-    service: `Продвижение\nInApp`,
+    service: t("pricePage.service3"),
     serviceAccent: `InApp`,
-    serviceDescription: `Разработка стратегии для продвижения\nс помощью рекламных площадок Unity,\nIntegral и другие`,
+    serviceDescription: t("pricePage.serviceDescription3"),
     guarantees: [
-      "Уникальная стратегия под вашу нишу",
-      "Пополнение без скрытых %",
-      "Запуск рекламных компаний",
+      t("pricePage.uniqueStrategy"),
+      t("pricePage.hiddenFees"),
+      t("pricePage.advertisingCampaigns"),
     ],
     price: "5000",
     isUnitPrice: false,
     md: {
-      service: `Продвижение\nInApp`,
+      service: t("pricePage.service3"),
       serviceAccent: `InApp`,
-      serviceDescription: `Разработка стратегии для\nпродвижения с помощью\nрекламных площадок Unity,\nIntegral и другие`
-    }
+      serviceDescription: t("pricePage.serviceDescriptionMobile3"),
+    },
   },
   {
-    service: `Продвижение\nGoogle (UAC)`,
+    service: t("pricePage.service4"),
     serviceAccent: `Google (UAC)`,
-    serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google `,
+    serviceDescription: t("pricePage.serviceDescription4"),
     guarantees: [
-      "Разработка шаблонов",
-      "Креативов , Текстов",
-      "Запуск рекламных компаний",
+      t("pricePage.templateDevelopment"),
+      t("pricePage.creatives"),
+      t("pricePageadvertisingCampaigns"),
     ],
     price: "10,000",
     isUnitPrice: false,
     md: {
-      service: `Продвижение\nGoogle (UAC)`,
+      service: t("pricePage.service4"),
       serviceAccent: `Google (UAC)`,
-      serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google`
-    }
+      serviceDescription: t("pricePage.serviceDescription4"),
+    },
   },
 ];

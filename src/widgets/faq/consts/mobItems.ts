@@ -1,33 +1,28 @@
-export const mobItems = [
+export const mobItems = (t: (key: string) => string) => [
   {
-  label: `Что такое ASO?`,
-  accent: `ASO?`,
-  content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
-  },
-  {
-    label: `Для чего\nнеобходимо ASO?`,
+    label: t("faqPage.label"),
     accent: `ASO?`,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
+    content: t("faqPage.content"),
   },
   {
-    label: `Что такое\nGoogle UAC?`,
+    label: t("faqPage.label2"),
+    accent: t("faqPage.accent2"),
+    content: t("faqPage.content2"),
+  },
+  {
+    label: t("faqPage.label3"),
     accent: `Google UAC?`,
     defaultOpen: true,
-    content: `Google UAC –– удобный\nинструмент для продвижения\nмобильных приложений, использующий алгоритмы\nискусственного интеллекта\nдля взаимодействия с юзерами\nс помощью сетей Google`,
-  }, 
-  {
-    label: "Что предоставляют наши услуги?",
-    accent: "наши услуги?",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
+    content: t("faqPage.content3"),
   },
   {
-    label: "Что такое In-App\nAds?",
+    label: t("faqPage.label4"),
+    accent: t("faqPage.accent4"),
+    content: t("faqPage.content4"),
+  },
+  {
+    label: t("faqPage.label5"),
     accent: "In-App\nAds?",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.",
-  }
-]
-
+    content: t("faqPage.content5"),
+  },
+];

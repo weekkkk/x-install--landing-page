@@ -10,18 +10,21 @@
           <h1
             class="max-md:text-4xl max-md:text-center max-md:leading-[1.2] text-8xl font-bold leading-[1.191] text-gradient grow"
           >
-            Остались вопросы?
+            {{ $t("socialPage.label") }}
           </h1>
         </div>
         <p
           class="max-md:text-base max-md:mt-4 mt-6 text-xl text-mediumGray font-medium leading-[1.2] text-center"
         >
-          У вас есть <span class="text-gradient">вопрос</span>,
-          <span class="text-gradient">идея</span> или <span
-            class="text-gradient"
-            >проект</span
+          {{ $t("socialPage.doYouHave") }} <span class="text-gradient">{{
+            $t("socialPage.question")
+          }}</span
+          >,
+          <span class="text-gradient">{{ $t("socialPage.idea") }}</span>
+          {{ $t("socialPage.or") }}
+          <span class="text-gradient">{{ $t("socialPage.project") }}</span
           >,<br />
-          в котором вам нужна помощь?
+          {{ $t("socialPage.helpWith") }}
         </p>
         <div
           class="flex max-md:flex-col max-md:justify-center max-md:gap-x-0 max-md:w-full max-md:mt-10 max-md:gap-y-[0.70rem] items-center mt-20 gap-x-[0.70rem]"

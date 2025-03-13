@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { keyFiguresList } from "./consts";
+const { t } = useI18n();
 </script>
 <template>
   <div class="max-md:flex max-md:justify-center">
@@ -7,26 +8,25 @@ import { keyFiguresList } from "./consts";
       <div
         class="text-4xl leading-[134%] font-bold max-md:text-base max-md:leading-[134%]"
       >
-        Наша цель —
+        {{ $t("purposesPage.urGoal") }}
         <span
           class="bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
         >
-          привлечь внимание
+          {{ $t("purposesPage.attention") }}
         </span>
-        потенциальных клиентов через их мобильные устройства и побудить
-        их к совершению
+        {{ $t("purposesPage.clientEngagement") }}
         <span
           class="bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
         >
-          целевого действия
+          {{ $t("purposesPage.targetedAction") }}
         </span>
-        : покупке, регистрации, переходу на сайт
+        {{ $t("purposesPage.userActionTypes") }}
       </div>
       <div
         class="mt-[5.5rem] max-md:mt-10 flex gap-[11.4rem] justify-between ml-[4.7rem] max-md:mx-0 mr-[5.7rem] max-md:flex-col max-md:justify-center max-md:gap-10"
       >
         <UiKeyFigures
-          v-for="keyFigure in keyFiguresList"
+          v-for="keyFigure in keyFiguresList(t)"
           :key="keyFigure.id"
           :title="keyFigure.title"
           :paragraph="keyFigure.paragraph"
