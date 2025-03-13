@@ -3,11 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxtjs/i18n"],
   i18n: {
-    vueI18n: "./locales/i18n.config.ts",
+    vueI18n: "../locales/i18n.config.ts",
     defaultLocale: "ru",
     locales: ["en", "ru"],
     strategy: "prefix",
-    customRoutes: "config"
+    customRoutes: "config",
   },
   tailwindcss: {
     cssPath: "~/src/app/assets/css/tailwind.css",
