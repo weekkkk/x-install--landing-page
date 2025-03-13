@@ -39,6 +39,12 @@ export default defineNuxtConfig({
       ],
     },
   },
+  generate: {
+    routes: [
+      "/ru",
+      "/en",
+    ],
+  },
   dir: {
     pages: "./src/app/routes",
     layouts: "./src/app/layouts",
