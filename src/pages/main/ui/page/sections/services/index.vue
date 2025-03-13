@@ -60,7 +60,7 @@
         />
       </div>
       <div
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.3rem] pb-[8rem] rounded-[3rem] relative"
+        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('/images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.3rem] pb-[8rem] rounded-[3rem] relative"
       >
         <NuxtImg
           src="/images/google-uac.webp"
@@ -92,7 +92,7 @@
         />
       </div>
       <div
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.8rem] pb-[8rem] rounded-[3rem] relative"
+        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('/images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.8rem] pb-[8rem] rounded-[3rem] relative"
       >
         <NuxtImg
           src="/images/is.webp"
@@ -138,7 +138,7 @@
         />
       </div>
       <div
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.8rem] pb-[8rem] rounded-[3rem] relative"
+        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('/images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.8rem] pb-[8rem] rounded-[3rem] relative"
       >
         <NuxtImg
           src="/images/ASO.webp"
