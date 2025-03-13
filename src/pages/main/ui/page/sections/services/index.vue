@@ -27,7 +27,7 @@
       class="grid grid-cols-2 max-md:grid-cols-1 gap-4 mt-20 max-md:mt-10 max-md:justify-items-center"
     >
       <div
-        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.3rem] pb-[8rem] rounded-[3rem] relative"
+        class="w-[45rem] max-md:w-[17.65rem] max-md:h-[20rem] h-[35rem] flex flex-col items-center bg-[url('/images/noise.webp')] bg-jetBlack pt-[5.8rem] max-md:pt-[2.3rem] pb-[8rem] rounded-[3rem] relative"
       >
         <NuxtImg
           src="/images/magnifier.webp"
