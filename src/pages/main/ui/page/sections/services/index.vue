@@ -4,11 +4,11 @@
   <div class="relative">
     <UiBlurCircle
       color="bg-turquoise-100"
-      class="absolute top-[-6.5rem] left-[-6.5rem] w-[18.25rem] h-[18.25rem] max-md:w-[7.304rem] max-md:h-[7.304rem]"
+      class="absolute top-[-6.5rem] -left-[6.5rem] w-[18.25rem] h-[18.25rem] max-md:w-[7.304rem] max-md:h-[7.304rem] max-md:-top-[4.1rem] max-md:-left-[3.2rem] max-md:!blur-[8rem]"
     />
     <UiBlurCircle
       color="bg-violet"
-      class="absolute top-[-18.5rem] right-[-6.5rem] w-[18.25rem] h-[18.25rem] max-md:w-[9.025rem] max-md:h-[9.025rem]"
+      class="absolute -top-[18.5rem] right-[-6.5rem] w-[18.25rem] h-[18.25rem] max-md:!w-[9.025rem] max-md:!h-[9.025rem] max-md:-top-[10.8rem] max-md:-right-[3.275rem] max-md:!blur-[9rem]"
     />
     <div class="text-center">
       <h1
@@ -52,11 +52,11 @@
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] h-[6.95rem] z-[1] top-[7rem] left-[23.45rem] max-md:left-[5.4725rem]"
+          class="absolute w-[6.95rem] max-md:w-[2.97rem] max-md:h-[2.97rem] h-[6.95rem] z-[1] top-[7rem] left-[23.45rem] max-md:left-[3.87rem] max-md:top-[2.54rem] max-md:!blur-[3.5rem]"
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] z-[1] max-md:w-[2.8285rem] max-md:h-[2.8285rem] max-md:left-[9.65rem] max-md:top-[4.25rem] top-[16.25rem] left-[16.65rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] z-[1] max-md:w-[2.97rem] max-md:h-[2.97rem] max-md:left-[10.65rem] max-md:top-[8.45rem] top-[16.25rem] left-[16.65rem] max-md:!blur-[3.5rem]"
         />
       </div>
       <div
@@ -84,11 +84,11 @@
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[7rem] left-[23.45rem] max-md:left-[9.35rem] max-md:top-[3.3145rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[7rem] left-[23.45rem] max-md:left-[9.35rem] max-md:top-[3.3145rem] max-md:!blur-[3.5rem]"
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[16.25rem] left-[16.65rem] max-md:left-[5.5rem] max-md:top-[8.6rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.74rem] max-md:h-[2.74rem] z-[1] top-[16.25rem] left-[16.65rem] max-md:left-[5.5rem] max-md:top-[8.6rem] max-md:!blur-[3.5rem]"
         />
       </div>
       <div
@@ -130,11 +130,11 @@
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[10rem] left-[11.4rem] max-md:left-[3.275rem] max-md:top-[4.325rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.475rem] max-md:h-[2.8285rem] z-[1] top-[10rem] left-[11.4rem] max-md:left-[3.275rem] max-md:top-[4.325rem] max-md:!blur-[2.5rem]"
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[15.8rem] left-[24.355rem] max-md:left-[9.7525rem] max-md:top-[7.225rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[3.1725rem] max-md:h-[2.4rem] z-[1] top-[15.8rem] left-[24.355rem] max-md:left-[9.7525rem] max-md:top-[7.225rem] max-md:!blur-[2.5rem]"
         />
       </div>
       <div
@@ -162,11 +162,11 @@
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[2.8285rem] max-md:h-[2.8285rem] z-[1] top-[11.25rem] left-[14.35rem] max-md:top-20 max-md:left-16"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[3.275rem] max-md:h-[2.475rem] z-[1] top-[11.25rem] left-[14.35rem] max-md:top-20 max-md:left-16 max-md:!blur-[3rem]"
         />
         <UiBlurCircle
           color="bg-turquoise-100"
-          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[3.2rem] max-md:h-[2.4rem] z-[1] top-[11.25rem] left-[26.2rem] max-md:top-[7.9rem] max-md:left-[10.4775rem]"
+          class="absolute w-[6.95rem] h-[6.95rem] max-md:w-[3.17rem] max-md:h-[2.4rem] z-[1] top-[11.25rem] left-[26.2rem] max-md:top-[7.9rem] max-md:left-[10.4775rem] max-md:!blur-[3rem]"
         />
       </div>
     </div>
