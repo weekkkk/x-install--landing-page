@@ -78,9 +78,9 @@
       class="absolute left-[63.25rem] max-md:left-[13.85rem] max-md:top-[5.75rem] top-[12.2rem] w-[13.75rem] h-[13.75rem] max-md:w-[5.47rem] max-md:h-[5.7rem] max-md:!blur-[4rem]"
     />
     <NuxtImg
-      src="/images/grid.webp"
+      src="/images/grid-lg.webp"
       alt="gridBackground"
-      class="absolute top-0 max-md:top-[15.5rem] left-0 -z-20 w-full max-w-none"
+      class="absolute top-0 max-md:top-[4.5rem] left-0 -z-20 w-full max-w-none max-md:w-[28.8rem] max-md:h-[32.15rem]"
     />
   </div>
 </template>
