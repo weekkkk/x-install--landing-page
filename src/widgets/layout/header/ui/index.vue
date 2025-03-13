@@ -1,16 +1,8 @@
 <script setup lang="ts">
 const { setLocale } = useI18n();
 
-const switchLocalePath = useSwitchLocalePath();
-
 /**Состояние шторки */
 const isOpenDrawer = ref(false);
-
-const route = useRoute();
-
-const selectedLang = computed(() => {
-  return route.path == "/ru" ? 1 : 0;
-});
 
 /**Путь фотки*/
 const imgPath = computed<string>(() => {
@@ -25,17 +17,6 @@ const itemsLang = [
     label: "RU",
   },
 ];
-
-/**Переключение локализации */
-const switchLocalization = (index: number) => {
-  const lang = index === 0 ? "en" : "ru";
-
-  const newPath = switchLocalePath(lang);
-
-  if (newPath && newPath !== route.fullPath) {
-    navigateTo(newPath);
-  }
-};
 
 /**Изменение состояния шторки */
 const switchStateDrawer = () => {
@@ -73,6 +54,7 @@ const scrollToSection = (id: string) => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+  console.log("onMounted");
 });
 
 onUnmounted(() => {
@@ -126,9 +108,8 @@ onUnmounted(() => {
 
     <div class="flex justify-end items-center gap-4 max-md:hidden w-full">
       <UTabs
-        v-memo="[selectedLang]"
-        v-model="selectedLang"
-        @change="switchLocalization"
+        :default-index="0"
+        @change="setLocale($event === 0 ? 'en' : 'ru')"
         :items="itemsLang"
         class="w-[8.5rem]"
         :ui="{ tab: 'h-[3.2rem]' }"
@@ -187,12 +168,12 @@ onUnmounted(() => {
           <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
         </div>
         <div class="absolute bottom-[2.6rem] w-[17.65rem] h-14">
-          <UTabs
+          <!-- <UTabs
             v-model="selectedLang"
             :items="itemsLang"
             @change="switchLocalization"
             class="w-[-webkit-fill-available]"
-          />
+          /> -->
         </div>
       </div>
     </Transition>

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     vueI18n: "../locales/i18n.config.ts",
     defaultLocale: "ru",
     locales: ["en", "ru"],
-    strategy: "prefix",
+    strategy: "no_prefix",
     customRoutes: "config",
   },
   tailwindcss: {
