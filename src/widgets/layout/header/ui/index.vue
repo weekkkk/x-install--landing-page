@@ -45,8 +45,6 @@ const isHeaderVisible = ref(true);
 const lastScrollY = ref(0);
 
 const handleScroll = (e: Event) => {
-  console.log(e);
-
   const currentScrollY = window.scrollY;
 
   if (currentScrollY === 0) {
@@ -56,6 +54,18 @@ const handleScroll = (e: Event) => {
   }
 
   lastScrollY.value = currentScrollY;
+};
+
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+
+  if (isOpenDrawer.value) {
+    switchStateDrawer();
+  }
+
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 };
 
 onMounted(() => {
@@ -86,18 +96,24 @@ onUnmounted(() => {
       class="text-white flex justify-center gap-20 mt-[0.5rem] max-md:hidden w-full"
     >
       <UButton
+        @click="scrollToSection('aboutUs')"
         variant="link"
         class="p-0 text-lg leading-[1.4915rem] mr-[0.1rem]"
       >
         {{ $t("aboutUs") }}
       </UButton>
       <UButton
+        @click="scrollToSection('services')"
         variant="link"
         class="p-0 text-lg leading-[1.4915rem] mr-[0.3rem]"
       >
         {{ $t("services") }}
       </UButton>
-      <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">
+      <UButton
+        @click="scrollToSection('price')"
+        variant="link"
+        class="p-0 text-lg leading-[1.4915rem]"
+      >
         {{ $t("price") }}
       </UButton>
       <UButton variant="link" class="p-0 text-lg leading-[1.4915rem]">
@@ -128,16 +144,32 @@ onUnmounted(() => {
       class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
     >
       <div class="flex flex-col items-center gap-2 text-2xl">
-        <UButton variant="link" class="max-md:text-[1.75rem]">
+        <UButton
+          @click="scrollToSection('welcome')"
+          variant="link"
+          class="max-md:text-[1.75rem]"
+        >
           {{ $t("home") }}
         </UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">
+        <UButton
+          @click="scrollToSection('aboutUs')"
+          variant="link"
+          class="max-md:text-[1.75rem]"
+        >
           {{ $t("aboutUs") }}
         </UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">
+        <UButton
+          @click="scrollToSection('services')"
+          variant="link"
+          class="max-md:text-[1.75rem]"
+        >
           {{ $t("services") }}
         </UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">
+        <UButton
+          @click="scrollToSection('price')"
+          variant="link"
+          class="max-md:text-[1.75rem]"
+        >
           {{ $t("price") }}
         </UButton>
         <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
