@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     defaultLocale: "ru",
     locales: ["en", "ru"],
     strategy: "prefix",
+    customRoutes: "config"
   },
   tailwindcss: {
     cssPath: "~/src/app/assets/css/tailwind.css",
