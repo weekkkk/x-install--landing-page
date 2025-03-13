@@ -2,7 +2,7 @@
   <LayoutHeaderWidget />
   <MainPageSectionsWelcome class="mt-[16.5rem] max-md:mt-[10rem]" />
   <MainPageSectionsPhone />
-  <MainPageSectionsPurposes class="mt-[7.4rem] max-md:mt-[1.7rem]" />
+  <MainPageSectionsPurposes class="mt-[7.4rem] max-md:mt-0" />
   <MainPageSectionsServices class="mt-[16.5rem] max-md:mt-[10rem]" />
   <MainPageSectionsFeedBackSection class="mt-[16.5rem] max-md:mt-[10rem]" />
   <PriceListWidget class="mt-[16.5rem]" />

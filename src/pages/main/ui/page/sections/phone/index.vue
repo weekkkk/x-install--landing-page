@@ -13,20 +13,20 @@
       class="moving-element w-[26.75rem] max-md:left-[4.808rem] max-md:top-[63rem] max-md:w-[10.031rem] max-md:h-[2.344rem] h-[6.25rem] absolute top-[70.15rem] left-[34.6rem] z-20"
     />
     <NuxtImg
-      src="/images/chart1.svg"
+      src="/images/chart1.webp"
       class="moving-element max-md:left-[13.77rem] max-md:top-[59.6rem] max-md:w-[4.2rem] max-md:h-[2.35rem] w-[10.8455rem] h-[6.2rem] absolute top-[62.8rem] left-[58.63rem] z-20"
       data-speed="3"
     />
     <NuxtImg
-      src="/images/rating.svg"
+      src="/images/rating1.webp"
       class="moving-element max-md:left-[2.706rem] max-md:top-[65.85rem] max-md:w-[3.1rem] max-md:h-[2.5875rem] w-[8.35rem] h-[7.3rem] absolute top-[77.05rem] left-[28.44rem] z-30"
     />
     <NuxtImg
-      src="/images/rating2.svg"
+      src="/images/rating2.webp"
       class="moving-element max-md:left-[15.876rem] max-md:top-[69.3rem] max-md:w-[3.592rem] max-md:h-[2.788rem] w-[9.897rem] h-[7.45rem] absolute top-[88.5rem] left-[62rem]"
     />
     <NuxtImg
-      src="/images/chart.svg"
+      src="/images/chart2.webp"
       class="moving-element max-md:left-[.85rem] max-md:top-[71.97rem] max-md:w-[3.5405rem] max-md:h-[2.6875rem] w-[9.5rem] h-[7.5rem] absolute top-[95.85rem] left-[26.32rem]"
     />
     <NuxtImg
