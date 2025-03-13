@@ -1,102 +1,102 @@
-export const iosServices: UiPriceCardProps[] = [
+export const iosServices = (t: (key: string) => string): UiPriceCardProps[] => [
   {
-    service: `Мотивированные\nустановки в AppStore`,
-    serviceAccent: `Мотивированные\nустановки`,
-    serviceDescription: `Выведение вашего приложения в топ выдачи по ключевым словам. Стоимость указана\nза одну мотивированную установку по одному\nключевому слову`,
+    service: t("pricePage.service") + "AppStore",
+    serviceAccent: t("pricePage.serviceAccent"),
+    serviceDescription: t("pricePage.serviceDescription"),
     guarantees: [
-      "Любое количество установок",
-      "Быстрое продвижение",
-      "Низкая цена",
-      "Персональное консультирование",
+      t("pricePage.numberInstalls"),
+      t("pricePage.fastPromotion"),
+      t("pricePage.lowPrice"),
+      t("pricePage.personalConsulting"),
     ],
     price: "0.24",
     isUnitPrice: true,
     md: {
-      service: `Мотивированные\nустановки в AppStore`,
-      serviceAccent: `Мотивированные\nустановки`,
-      serviceDescription: `Выведение вашего\nприложения в топ выдачи\nпо ключевым словам.`
-    }
+      service: t("pricePage.service"),
+      serviceAccent: t("pricePage.serviceAccent"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile1"),
+    },
   },
   {
-    service: `Разработка\nприложений на IOS`,
-    serviceAccent: `приложений`,
-    serviceDescription: `Продажа готовых приложений для арбитража\nтраффика или разработка под заказ`,
-    guarantees: ["Индивидуальный подход"],
+    service: t("pricePage.service2") + "IOS",
+    serviceAccent: t("pricePage.serviceAccent2"),
+    serviceDescription: t("pricePage.serviceDescription2"),
+    guarantees: [t("pricePage.individualApproach")],
     price: "2999",
     isUnitPrice: false,
     md: {
-      service: `Разработка\nприложений на IOS`,
-      serviceAccent: `приложений`,
-      serviceDescription: `Продажа готовых приложений\nдля арбитража траффика\nили разработка под заказ`,
+      service: t("pricePage.service2"),
+      serviceAccent: t("pricePage.serviceAccent2"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile2"),
       guarantees: [
-        'Любые источники трафика',
-        'Индивидуальный подход',
-        'Быстрое получение результата'
-      ]
-    }
+        t("pricePage.trafficSources"),
+        t("pricePage.individualApproach"),
+        t("pricePage.resultsQuickly"),
+      ],
+    },
   },
   {
-    service: `Продвижение\nInApp`,
+    service: t("pricePage.service3"),
     serviceAccent: `InApp`,
-    serviceDescription: `Разработка стратегии для продвижения\nс помощью рекламных площадок Unity,\nIntegral и другие`,
+    serviceDescription: t("pricePage.serviceDescription3"),
     guarantees: [
-      "Уникальная стратегия под вашу нишу",
-      "Пополнение без скрытых %",
-      "Запуск рекламных компаний",
+      t("pricePage.uniqueStrategy"),
+      t("pricePage.hiddenFees"),
+      t("pricePage.advertisingCampaigns"),
     ],
     price: "5000",
     isUnitPrice: false,
     md: {
-      service: `Продвижение\nInApp`,
+      service: t("pricePage.service3"),
       serviceAccent: `InApp`,
-      serviceDescription: `Разработка стратегии для\nпродвижения с помощью\nрекламных площадок Unity,\nIntegral и другие`
-    }
+      serviceDescription: t("pricePage.serviceDescriptionMobile3"),
+    },
   },
   {
-    service: `Продвижение\nGoogle (UAC)`,
+    service: t("pricePage.service4"),
     serviceAccent: `Google (UAC)`,
-    serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google`,
+    serviceDescription: t("pricePage.serviceDescription4"),
     guarantees: [
-      "Разработка шаблонов",
-      "Креативов , Текстов",
-      "Запуск рекламных компаний",
+      t("pricePage.templateDevelopment"),
+      t("pricePage.creatives"),
+      t("pricePage.advertisingCampaigns"),
     ],
     price: "10,000",
     isUnitPrice: false,
     md: {
-      service: `Продвижение\nGoogle (UAC)`,
+      service: t("pricePage.service4"),
       serviceAccent: `Google (UAC)`,
-      serviceDescription: `Разработка стратегии\nпродвижения с помощью\nрекламных площадок Google`,
-    }
+      serviceDescription: t("pricePage.serviceDescription4"),
+    },
   },
   {
-    service: `Гарантированное\nпродвижение\nв топ по ключу`,
-    serviceAccent: `Гарантированное\nпродвижение\n`,
-    serviceDescription: `Стоимость формируется по результатам\nоценки каждого отдельного кейса`,
+    service: t("pricePage.service5"),
+    serviceAccent: t("pricePage.serviceAccent5"),
+    serviceDescription: t("pricePage.serviceDescription5"),
     guarantees: [
-      "Оплата за результат",
-      "Быстрое продвижение",
-      "Уникальная система продвижения",
+      t("pricePage.paymentResults"),
+      t("pricePage.fastPromotion"),
+      t("pricePage.promotionSystem"),
     ],
     md: {
-      service: `Гарантированное\nпродвижение`,
-      serviceAccent: `Гарантированное\n`,
-      serviceDescription: `Стоимость формируется\nпо результатам оценки\nкаждого отдельного кейса`,
-    }
+      service: t("pricePage.serviceAccent5"),
+      serviceAccent: t("pricePage.guaranteed"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile5"),
+    },
   },
   {
-    service: `Бизнес\nсотрудничество`,
-    serviceAccent: `Бизнес`,
-    serviceDescription: `Мы открыты к взаимовыгодному сотрудничеству.\nРеализуем продвижение приложений в топы\nпо ключевым словам за долю в вашем приложении`,
+    service: t("pricePage.service6"),
+    serviceAccent: t("pricePage.serviceAccent6"),
+    serviceDescription: t("pricePage.serviceDescription6"),
     guarantees: [
-      "Индивидуальный подход",
-      "Мы инвестируем в ваше развитие",
-      "Мы заинтересованы в успешном результате",
+      t("pricePage.individualApproach"),
+      t("pricePage.invest"),
+      t("pricePage.weInterested"),
     ],
-        md: {
-          service: `Бизнес\nсотрудничество`,
-          serviceAccent: `Бизнес`,
-          serviceDescription: `Мы открыты\nк взаимовыгодному\nсотрудничеству.`,
-    }
+    md: {
+      service: t("pricePage.service6"),
+      serviceAccent: t("pricePage.serviceAccent6"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile6"),
+    },
   },
 ];

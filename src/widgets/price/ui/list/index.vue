@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { iosServices, androidServices, tabs } from "./consts";
 const activeTab = ref(0);
+
+const { t } = useI18n();
+
 const currentComponents = computed(() =>
-  activeTab.value === 0 ? iosServices : androidServices
+  activeTab.value === 0 ? iosServices(t) : androidServices(t)
 );
 </script>
 <template>
@@ -14,7 +17,7 @@ const currentComponents = computed(() =>
         <h2
           class="max-md:leading-none text-center inline-block max-md:text-[1.75rem] text-6xl font-bold bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text mb-6 max-md:mb-4"
         >
-          Цены
+          {{ $t("pricePage.prices") }}
         </h2>
         <UiBlurCircle
           color="bg-turquoise-100"
@@ -27,8 +30,7 @@ const currentComponents = computed(() =>
         <p
           class="max-md:text-base text-xl text-center font-medium text-mediumGray mb-[4.25rem] max-md:mb-[1.3rem]"
         >
-          Предоставляем конкурентноспособные условия на услуги в области
-          разработки gambling приложений и ASO продвижения
+          {{ $t("pricePage.provision") }}
         </p>
       </div>
       <UTabs

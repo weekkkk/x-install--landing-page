@@ -1,8 +1,12 @@
 <script setup lang="ts">
 const { setLocale } = useI18n();
 
+const switchLocalePath = useSwitchLocalePath();
+
 /**Состояние шторки */
 const isOpenDrawer = ref(false);
+
+const route = useRoute();
 
 /**Выбранный язык */
 const selectedLang = ref(1);
@@ -24,13 +28,13 @@ const itemsLang = [
 /**Переключение локализации */
 const switchLocalization = (index: number) => {
   selectedLang.value = index;
-  switch (index) {
-    case 0:
-      setLocale("en");
-      break;
-    case 1:
-      setLocale("ru");
-      break;
+
+  const lang = index === 0 ? "en" : "ru";
+
+  const newPath = switchLocalePath(lang);
+
+  if (newPath && newPath !== route.fullPath) {
+    navigateTo(newPath);
   }
 };
 
@@ -70,6 +74,8 @@ const scrollToSection = (id: string) => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+
+  selectedLang.value = route.fullPath == "/ru" ? 1 : 0;
 });
 
 onUnmounted(() => {
@@ -130,7 +136,7 @@ onUnmounted(() => {
         :ui="{ tab: 'h-[3.2rem]' }"
       />
       <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg">
-        Связаться
+        {{ $t("contact") }}
       </UButton>
     </div>
     <UIcon

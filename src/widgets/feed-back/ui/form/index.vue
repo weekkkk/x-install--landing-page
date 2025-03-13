@@ -34,13 +34,13 @@ const sendFormInfo = async () => {
       <h1
         class="text-6xl max-md:text-[1.75rem] max-md:leading-[1.2] font-bold bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
       >
-        Мы поможем!
+        {{ $t("feedBackPage.help") }}
       </h1>
       <p
         class="text-mediumGray text-center max-md:text-base text-xl mt-6 max-md:mt-4"
       >
-        Проконсультируем вас по поводу любого <br class="max-md:hidden" />
-        предложения
+        {{ $t("feedBackPage.consultation") }} <br class="max-md:hidden" />
+        {{ $t("feedBackPage.proposal") }}
       </p>
       <UiBlurCircle
         color="bg-turquoise-100"
@@ -58,7 +58,7 @@ const sendFormInfo = async () => {
     >
       <UFormGroup name="name">
         <UInput
-          placeholder="Имя"
+          :placeholder="$t('feedBackPage.name')"
           v-model="inputName"
           :ui="{
             form: 'max-md:text-xs max-md:px-6 max-md:py-5 max-md:h-16',
@@ -80,7 +80,7 @@ const sendFormInfo = async () => {
       </UFormGroup>
       <UFormGroup name="message">
         <UTextarea
-          placeholder="Сообщение"
+          :placeholder="$t('feedBackPage.message')"
           v-model="textereaMessage"
           class="w-[45rem] max-md:w-[17.65rem] max-md:text-xs leading-none"
           :ui="{
@@ -93,7 +93,7 @@ const sendFormInfo = async () => {
         type="submit"
         class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-6 max-md:mt-2"
       >
-        Отправить
+        {{ $t('feedBackPage.send') }}
       </UButton>
     </UForm>
   </div>
