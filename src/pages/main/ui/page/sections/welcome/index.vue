@@ -5,12 +5,14 @@
       <div
         class="text-8xl max-md:text-4xl max-md:leading-[3.6rem] leading-[7.16rem] text-center font-bold"
       >
-        Лучшее решение <br />
-        <span class="max-md:hidden">в области</span>
+        {{ $t("titleWelcome.bestSolution") }} <br />
+        <span class="max-md:hidden">{{
+          $t("titleWelcome.fieldOfExpertise")
+        }}</span>
         <span
           class="bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
         >
-          Маркетинга
+          {{ $t("titleWelcome.solution") }}
         </span>
       </div>
       <div
@@ -20,21 +22,23 @@
         <span
           class="bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
         >
-          ведущий холдинг
+          {{ $t("paragraphWelcome.leadingHolding") }}
           <span class="max-md:text-mediumGray">
-            в сфере мобильного маркетинга</span
+            {{ $t("paragraphWelcome.area") }}</span
           ></span
         ><span class="text-mediumGray">
-          . Мы предлагаем <br class="max-md:hidden" />
-          широкий спектр услуг по продвижению мобильных приложений и продуктов
+          {{ $t("paragraphWelcome.offer") }} <br class="max-md:hidden" />
+          {{ $t("paragraphWelcome.aboutServices") }}
           <br />
-          с использованием
+          {{ $t("paragraphWelcome.using") }}
         </span>
         <span
           class="bg-gradient-to-r dark:from-turquoise-100 dark:to-green bg-clip-text text-transparent"
         >
-          современных технологий
-          <span class="max-md:text-mediumGray"> и стратегий</span>
+          {{ $t("paragraphWelcome.technologies") }}
+          <span class="max-md:text-mediumGray">{{
+            $t("paragraphWelcome.strategy")
+          }}</span>
         </span>
       </div>
       <div
@@ -44,11 +48,11 @@
           size="md"
           class="flex justify-center w-[16.5rem] text-lg max-md:text-xs leading-[1.4915rem] max-md:w-[17.6rem] font-semibold"
         >
-          Начать
+          {{ $t("start") }}
         </UButton>
         <UButton
           variant="outline"
-          label="Наши услуги"
+          :label="$t('ourServices')"
           class="flex justify-center w-[16.5rem] max-md:text-xs text-lg max-md:h-[2.8rem] max-md:w-[17.6rem] leading-[1.4915rem] font-semibold"
         >
           <template #trailing>

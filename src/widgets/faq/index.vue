@@ -3,9 +3,11 @@ import { deskItems } from "./consts/deskItems";
 import { mobItems } from "./consts/mobItems";
 import { useMediaQuery } from "@vueuse/core";
 
+const { t } = useI18n();
+
 const isLargeScreen = useMediaQuery("(min-width: 768px)");
 const items = computed(() => {
-  return isLargeScreen.value ? deskItems : mobItems;
+  return isLargeScreen.value ? deskItems(t) : mobItems(t);
 });
 </script>
 <template>
@@ -45,14 +47,13 @@ const items = computed(() => {
           >
             <span
               class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
-              ><span>{{ item.label.replace(item.accent, "") }}</span
+              ><span>{{ item.label.split(item.accent)[0] }}</span
               ><span
                 class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
-                v-for="(word, index) in item.accent.match(/(\S+|\s|\n)/g) || []"
-                :key="index"
-                ><span> </span>{{ word }}</span
-              ></span
+                >{{ item.accent }}</span
+              ><span>{{ item.label.split(item.accent)[1] }}</span></span
             >
+
             <UIcon
               variant="ghost"
               :name="'xi-i-arrow-down'"

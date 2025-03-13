@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxtjs/i18n"],
   i18n: {
     vueI18n: "./locales/i18n.config.ts",
+    defaultLocale: "ru",
+    locales: ["en", "ru"],
+    strategy: "prefix",
   },
   tailwindcss: {
     cssPath: "~/src/app/assets/css/tailwind.css",
@@ -35,6 +38,12 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  generate: {
+    routes: [
+      "/ru",
+      "/en",
+    ],
   },
   dir: {
     pages: "./src/app/routes",
