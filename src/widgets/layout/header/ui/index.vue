@@ -11,11 +11,6 @@ const route = useRoute();
 /**Выбранный язык */
 const selectedLang = ref(1);
 
-/**Путь фотки*/
-const imgPath = computed<string>(() => {
-  return isOpenDrawer.value ? "xi-i-burger-open" : "xi-i-burger";
-});
-
 const itemsLang = [
   {
     label: "EN",
@@ -140,7 +135,14 @@ onUnmounted(() => {
       </UButton>
     </div>
     <UIcon
-      :name="imgPath"
+      name="xi-i-burger"
+      v-show="!isOpenDrawer"
+      @click="switchStateDrawer"
+      class="md:hidden z-10 w-[1.2rem] h-[1.2rem]"
+    />
+    <UIcon
+      name="xi-i-burger-open"
+      v-show="isOpenDrawer"
       @click="switchStateDrawer"
       class="md:hidden z-10 w-[1.2rem] h-[1.2rem]"
     />
