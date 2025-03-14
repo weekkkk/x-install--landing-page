@@ -60,7 +60,7 @@ export const androidServices = (
     guarantees: [
       t("pricePage.templateDevelopment"),
       t("pricePage.creatives"),
-      t("pricePageadvertisingCampaigns"),
+      t("pricePage.advertisingCampaigns"),
     ],
     price: "10,000",
     isUnitPrice: false,
