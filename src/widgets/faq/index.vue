@@ -61,27 +61,6 @@ const items = computed(() => {
                 {{ item.label }}
               </template>
             </span>
-            <!-- <span
-              class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
-              v-if="item.accent !== ''"
-              ><span>{{
-                item.accent ? item.label.split(item.accent)[0] : item.label
-              }}</span
-              ><span
-                v-if="item.accent"
-                class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
-                >{{ item.accent }}</span
-              ><span v-if="item.accent">{{
-                item.label.split(item.accent)[1]
-              }}</span></span
-            > -->
-            <!-- <span
-              v-if="!item.accent"
-              class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
-            >
-              {{ item.label }}
-            </span> -->
-
             <UIcon
               variant="ghost"
               :name="'xi-i-arrow-down'"
