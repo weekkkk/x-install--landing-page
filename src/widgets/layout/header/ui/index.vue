@@ -145,11 +145,17 @@ onUnmounted(() => {
       class="md:hidden z-10 w-[1.2rem] h-[1.2rem]"
     />
 
-    <transition name="fade">
+    <Transition
+      enter-active-class="transition-opacity duration-200 ease-in-out"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition-opacity duration-200 ease-in-out"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
       <div
         v-show="isOpenDrawer"
-        class="animate-fadeIn md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
-        :class="{ 'animate-fadeOut': !isOpenDrawer }"
+        class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
       >
         <div class="flex flex-col items-center gap-2 text-2xl">
           <UButton
@@ -191,6 +197,6 @@ onUnmounted(() => {
           />
         </div>
       </div>
-    </transition>
+    </Transition>
   </header>
 </template>
