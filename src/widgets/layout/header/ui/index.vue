@@ -145,49 +145,52 @@ onUnmounted(() => {
       class="md:hidden z-10 w-[1.2rem] h-[1.2rem]"
     />
 
-    <div
-      v-if="isOpenDrawer"
-      class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
-    >
-      <div class="flex flex-col items-center gap-2 text-2xl">
-        <UButton
-          @click="scrollToSection('welcome')"
-          variant="link"
-          class="max-md:text-[1.75rem]"
-        >
-          {{ $t("home") }}
-        </UButton>
-        <UButton
-          @click="scrollToSection('aboutUs')"
-          variant="link"
-          class="max-md:text-[1.75rem]"
-        >
-          {{ $t("aboutUs") }}
-        </UButton>
-        <UButton
-          @click="scrollToSection('services')"
-          variant="link"
-          class="max-md:text-[1.75rem]"
-        >
-          {{ $t("services") }}
-        </UButton>
-        <UButton
-          @click="scrollToSection('price')"
-          variant="link"
-          class="max-md:text-[1.75rem]"
-        >
-          {{ $t("price") }}
-        </UButton>
-        <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
+    <transition name="fade">
+      <div
+        v-show="isOpenDrawer"
+        class="animate-fadeIn md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
+        :class="{ 'animate-fadeOut': !isOpenDrawer }"
+      >
+        <div class="flex flex-col items-center gap-2 text-2xl">
+          <UButton
+            @click="scrollToSection('welcome')"
+            variant="link"
+            class="max-md:text-[1.75rem]"
+          >
+            {{ $t("home") }}
+          </UButton>
+          <UButton
+            @click="scrollToSection('aboutUs')"
+            variant="link"
+            class="max-md:text-[1.75rem]"
+          >
+            {{ $t("aboutUs") }}
+          </UButton>
+          <UButton
+            @click="scrollToSection('services')"
+            variant="link"
+            class="max-md:text-[1.75rem]"
+          >
+            {{ $t("services") }}
+          </UButton>
+          <UButton
+            @click="scrollToSection('price')"
+            variant="link"
+            class="max-md:text-[1.75rem]"
+          >
+            {{ $t("price") }}
+          </UButton>
+          <UButton variant="link" class="max-md:text-[1.75rem]">DSP</UButton>
+        </div>
+        <div class="absolute bottom-[2.6rem] w-[17.65rem] h-14">
+          <UTabs
+            v-model="selectedLang"
+            :items="itemsLang"
+            @change="switchLocalization"
+            class="w-[-webkit-fill-available]"
+          />
+        </div>
       </div>
-      <div class="absolute bottom-[2.6rem] w-[17.65rem] h-14">
-        <UTabs
-          v-model="selectedLang"
-          :items="itemsLang"
-          @change="switchLocalization"
-          class="w-[-webkit-fill-available]"
-        />
-      </div>
-    </div>
+    </transition>
   </header>
 </template>
