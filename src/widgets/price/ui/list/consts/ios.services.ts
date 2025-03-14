@@ -12,9 +12,9 @@ export const iosServices = (t: (key: string) => string): UiPriceCardProps[] => [
     price: "0.24",
     isUnitPrice: true,
     md: {
-      service: t("pricePage.service"),
+      service: t("pricePage.service") + "AppStore",
       serviceAccent: t("pricePage.serviceAccent"),
-      serviceDescription: t("pricePage.serviceDescriptionMobile1"),
+      serviceDescription: t("pricePage.serviceDescriptionMobile"),
     },
   },
   {
@@ -25,7 +25,7 @@ export const iosServices = (t: (key: string) => string): UiPriceCardProps[] => [
     price: "2999",
     isUnitPrice: false,
     md: {
-      service: t("pricePage.service2"),
+      service: t("pricePage.service2") + "IOS",
       serviceAccent: t("pricePage.serviceAccent2"),
       serviceDescription: t("pricePage.serviceDescriptionMobile2"),
       guarantees: [
