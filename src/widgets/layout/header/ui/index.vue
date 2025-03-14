@@ -8,8 +8,9 @@ const isOpenDrawer = ref(false);
 
 const route = useRoute();
 
-/**Выбранный язык */
-const selectedLang = ref(1);
+const selectedLang = computed(() => {
+  return route.path == "/ru" ? 1 : 0;
+});
 
 /**Путь фотки*/
 const imgPath = computed<string>(() => {
@@ -27,8 +28,6 @@ const itemsLang = [
 
 /**Переключение локализации */
 const switchLocalization = (index: number) => {
-  selectedLang.value = index;
-
   const lang = index === 0 ? "en" : "ru";
 
   const newPath = switchLocalePath(lang);
@@ -74,8 +73,6 @@ const scrollToSection = (id: string) => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
-
-  selectedLang.value = route.fullPath == "/ru" ? 1 : 0;
 });
 
 onUnmounted(() => {
@@ -129,6 +126,7 @@ onUnmounted(() => {
 
     <div class="flex justify-end items-center gap-4 max-md:hidden w-full">
       <UTabs
+        v-memo="[selectedLang]"
         v-model="selectedLang"
         @change="switchLocalization"
         :items="itemsLang"
