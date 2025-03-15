@@ -3,10 +3,10 @@
     id="welcome"
     class="mt-[16.5rem] max-md:mt-[10rem]"
   />
-  <MainPageSectionsPhone />
+  <MainPageSectionsPhone class="mt-[11.12rem] max-md:mt-[9.59rem]" />
   <MainPageSectionsPurposes
     id="aboutUs"
-    class="mt-[7.4rem] max-md:mt-[1.7rem]"
+    class="mt-[15.44rem] max-md:mt-[9.6rem]"
   />
   <MainPageSectionsServices
     id="services"
