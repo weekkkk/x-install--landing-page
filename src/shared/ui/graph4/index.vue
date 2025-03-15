@@ -1,7 +1,7 @@
 <script setup lant="ts"></script>
 <template>
   <svg
-    class="max-md:w-[14.95rem] max-md:h-[4.35rem] max-md:top-[56.85rem] max-md:left-[7.08rem] w-[60.6rem] h-[20.85rem] top-[86.07rem] left-[35.48rem] absolute -z-[2]"
+    class="moving-element max-md:w-[14.95rem] max-md:h-[4.35rem] max-md:top-[8.65rem] max-md:left-[5.08rem] w-[60.6rem] h-[20.85rem] top-[27.28rem] left-[32.98rem] absolute -z-[2]"
     width="1212"
     height="417"
     viewBox="0 0 1212 417"
