@@ -42,7 +42,7 @@ const items = computed(() => {
       <UAccordion :items="items">
         <template #default="{ item, open }" as="div">
           <div
-            class="text-4xl font-bold flex items-center justify-between max-md:text-lg"
+            class="text-4xl font-bold flex items-center justify-between max-md:text-lg transition-all duration-500"
             :class="{ 'max-md:mt-6': open }"
           >
             <span

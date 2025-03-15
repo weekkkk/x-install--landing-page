@@ -74,7 +74,7 @@ export default defineAppConfig({
         base: '',
         size: 'text-xl max-md:text-base',
         color: 'text-mediumGray leading-[2rem] whitespace-pre-line',
-        padding: 'pt-3 -mb-[0.7rem] max-md:mb-0 max-md:pb-[2.95rem]',
+        padding: 'pt-3 max-md:mb-0 max-md:pb-[2.95rem]',
       },
       content: "text-mediumGray text-xl",
       defaultOpen: false,
