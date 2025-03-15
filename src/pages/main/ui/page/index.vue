@@ -1,5 +1,4 @@
 <template>
-  <LayoutHeaderWidget />
   <MainPageSectionsWelcome
     id="welcome"
     class="mt-[16.5rem] max-md:mt-[10rem]"
@@ -17,10 +16,13 @@
   <PriceListWidget id="price" class="mt-[16.5rem]" />
   <FaqWidget />
   <SocialMediaWidget />
-  <LayoutFooterWidget />
 </template>
 
 <script setup>
+definePageMeta({
+  layout: "default",
+});
+
 useHead({
   title: "X-Install",
 });

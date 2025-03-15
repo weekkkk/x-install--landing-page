@@ -29,8 +29,9 @@ const switchLocalization = (index: number) => {
   const newPath = switchLocalePath(lang);
 
   if (newPath && newPath !== route.fullPath) {
-    navigateTo(newPath);
-
+    navigateTo({
+      path: newPath,
+    });
     document.body.classList.remove("overflow-hidden");
   }
 };
