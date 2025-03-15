@@ -12,7 +12,6 @@ export const mobItems = (t: (key: string) => string) => [
   {
     label: t("faqPage.label3"),
     accent: `Google UAC?`,
-    defaultOpen: true,
     content: t("faqPage.content3"),
   },
   {
@@ -22,7 +21,7 @@ export const mobItems = (t: (key: string) => string) => [
   },
   {
     label: t("faqPage.label5"),
-    accent: "In-App\nAds?",
+    accent: '',
     content: t("faqPage.content5"),
   },
 ];

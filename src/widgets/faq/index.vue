@@ -47,13 +47,20 @@ const items = computed(() => {
           >
             <span
               class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
-              ><span>{{ item.label.split(item.accent)[0] }}</span
-              ><span
-                class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
-                >{{ item.accent }}</span
-              ><span>{{ item.label.split(item.accent)[1] }}</span></span
             >
-
+              <template v-if="item.accent !== ''">
+                <span>{{ item.label.split(item.accent)[0] }}</span>
+                <span
+                  class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
+                >
+                  {{ item.accent }}
+                </span>
+                <span>{{ item.label.split(item.accent)[1] }}</span>
+              </template>
+              <template v-else>
+                {{ item.label }}
+              </template>
+            </span>
             <UIcon
               variant="ghost"
               :name="'xi-i-arrow-down'"

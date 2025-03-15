@@ -134,7 +134,7 @@ export default defineI18nConfig(() => ({
         label5: "What are In-App Ads?",
         content5:
           "In-app advertising allows companies to promote their products and services to a target audience already using mobile apps. It is an effective way to attract user attention and encourage action.",
-        accent5: "In-App Ads",
+        accent5: "",
       },
       socialPage: {
         label: "Have questions?",
@@ -279,7 +279,7 @@ export default defineI18nConfig(() => ({
         label5: "Что такое In-App Ads?",
         content5:
           "Реклама в приложениях позволяет компаниям продвигать свои продукты и услуги целевой аудитории, уже использующей мобильные приложения. Это эффективный способ привлечь внимание пользователей и побудить их к действию.",
-        accent5: "In-App Ads",
+        accent5: "",
       },
       socialPage: {
         label: "Остались вопросы?",
