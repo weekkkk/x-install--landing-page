@@ -76,15 +76,15 @@ const scrollToUpPage = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-// onMounted(() => {
-//   window.addEventListener("scroll", handleScroll);
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
 
-//   selectedLang.value = route.fullPath == "/ru" ? 1 : 0;
-// });
+  selectedLang.value = route.fullPath == "/ru" ? 1 : 0;
+});
 
-// onUnmounted(() => {
-//   window.removeEventListener("scroll", handleScroll);
-// });
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 <template>
   <header
