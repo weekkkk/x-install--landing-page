@@ -39,37 +39,31 @@ onMounted(() => {
       <NuxtImg
         src="/images/application1.png"
         class="box w-[26.75rem] max-md:left-[3.808rem] max-md:top-[4.34rem] max-md:w-[10.031rem] max-md:h-[2.344rem] h-[6.25rem] absolute top-[11.579rem] left-[32.1rem] z-20"
-        placeholder
         preload
       />
       <NuxtImg
         src="/images/chart1.webp"
         class="box max-md:left-[12.77rem] max-md:top-[1.255rem] max-md:w-[4.2rem] max-md:h-[2.35rem] w-[10.8455rem] h-[6.2rem] absolute top-[4.329rem] left-[56.136rem] z-20"
-        placeholder
         preload
       />
       <NuxtImg
         src="/images/rating1.webp"
         class="box max-md:left-[1.706rem] max-md:top-[7.57rem] max-md:w-[3.1rem] max-md:h-[2.5875rem] w-[8.35rem] h-[7.3rem] absolute top-[18.479rem] left-[25.95rem] z-30"
-        placeholder
         preload
       />
       <NuxtImg
         src="/images/rating2.webp"
         class="box max-md:left-[14.936rem] max-md:top-[10.904rem] max-md:w-[3.592rem] max-md:h-[2.788rem] w-[9.897rem] h-[7.45rem] absolute top-[29.93rem] left-[59.93rem]"
-        placeholder
         preload
       />
       <NuxtImg
         src="/images/chart2.webp"
         class="box max-md:-left-[.15rem] max-md:top-[13.55rem] max-md:w-[3.5405rem] max-md:h-[2.6875rem] w-[9.5rem] h-[7.5rem] absolute top-[37.28rem] left-[23.82rem]"
-        placeholder
         preload
       />
       <NuxtImg
         src="/images/application2.png"
         class="box max-md:left-[4.3705rem] max-md:top-[7.917rem] max-md:w-[8.925rem] max-md:h-[2.1rem] w-[23.8rem] h-[5.6rem] absolute top-[20.58rem] left-[33.6rem] z-20"
-        placeholder
         preload
       />
 
