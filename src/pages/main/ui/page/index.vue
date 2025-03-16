@@ -19,28 +19,52 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({
-  layout: "default",
-});
-
 useHead({
   title: "X-Install",
 });
 
-const movingEls = ref<NodeListOf<HTMLElement> | null>(null)
+function debounce<T extends (...args: any[]) => void>(
+  fn: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
+  return (...args: Parameters<T>) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+}
+
+let isAnim = true;
+
+const movingEls = ref<NodeListOf<HTMLElement> | null>(null);
+const lastOffset = ref<number>(0);
 const updatePositions = () => {
-  console.log(movingEls.value);
-  
-  if(!movingEls.value) return
-  
-  movingEls.value.forEach((el) => {
-    const targetOffset = window.scrollY / 10;
+  if (!movingEls.value) return;
 
+  movingEls.value.forEach((el) => {
+    const targetOffset = Math.min(window.scrollY / 6, 200);
+
+    const duration = Math.abs(lastOffset.value - targetOffset) * 8;
     el.style.transform = `translateY(${-targetOffset}px)`;
-    el.style.transitionDuration = (targetOffset / 20 * 0.05) + "s" 
+    el.style.transitionDuration = duration + "ms";
+    lastOffset.value = targetOffset;
+
+    console.log(duration);
+
+    if (!duration) {
+      document.addEventListener("scroll", handleScroll, { once: true });
+      return;
+    }
+
+    setTimeout(() => {
+      updatePositions();
+    }, duration);
   });
 };
+
 const ticking = ref(false);
 
 const handleScroll = (e?: Event) => {
@@ -53,12 +77,11 @@ const handleScroll = (e?: Event) => {
   }
 };
 onMounted(() => {
-  movingEls.value = document.querySelectorAll(".moving-element")
-  handleScroll()
+  movingEls.value = document.querySelectorAll(".moving-element");
+  updatePositions();
 
-  document.addEventListener("scroll", handleScroll);
+  document.addEventListener("scroll", handleScroll, { once: true });
 });
-
 
 onUnmounted(() => {
   document.removeEventListener("scroll", handleScroll); // Очищаем слушатель при удалении компонента
