@@ -5,6 +5,18 @@ const inputTelegram = ref("");
 
 const textereaMessage = ref("");
 
+const isDefault = ref(true);
+const isPending = ref(false);
+const isSuccess = ref(false);
+
+const isFormValid = computed(() => {
+  return (
+    inputName.value.trim() &&
+    inputTelegram.value.trim() &&
+    textereaMessage.value.trim()
+  );
+});
+
 const formState = {
   name: inputName.value,
   telegram: inputTelegram.value,
@@ -12,6 +24,10 @@ const formState = {
 };
 
 const sendFormInfo = async () => {
+  if (!isFormValid.value) return;
+
+  isDefault.value = false;
+  isPending.value = true;
   try {
     const data: FeedbackDataDto = {
       name: inputName.value,
@@ -19,12 +35,20 @@ const sendFormInfo = async () => {
       message: textereaMessage.value,
     };
     await FeedbackService.sendFeedbackForm(data);
+    isPending.value = false;
+    isSuccess.value = true;
+    inputName.value = "";
+    inputTelegram.value = "";
+    textereaMessage.value = "";
   } catch (error) {
     console.error("Ошибка при отправке данных:", error);
+  } finally {
+    setTimeout(() => {
+      isPending.value = false;
+      isSuccess.value = false;
+      isDefault.value = true;
+    }, 2000);
   }
-  inputName.value = "";
-  inputTelegram.value = "";
-  textereaMessage.value = "";
 };
 </script>
 
@@ -90,10 +114,13 @@ const sendFormInfo = async () => {
         />
       </UFormGroup>
       <UButton
+        :disabled="!isDefault"
         type="submit"
         class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-6 max-md:mt-2"
       >
-        {{ $t("feedBackPage.send") }}
+        <span v-show="isDefault">{{ $t("feedBackPage.send") }}</span>
+        <span v-show="isPending">{{ $t("feedBackPage.sending") }}</span>
+        <span v-show="isSuccess">{{ $t("feedBackPage.sent") }}</span>
       </UButton>
     </UForm>
   </div>
