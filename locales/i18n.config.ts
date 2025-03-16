@@ -56,6 +56,8 @@ export default defineI18nConfig(() => ({
         name: "Name",
         message: "Message",
         send: "Send",
+        sending: "Sending...",
+        sent: "Success",
       },
       pricePage: {
         prices: "Prices",
@@ -201,6 +203,8 @@ export default defineI18nConfig(() => ({
         name: "Имя",
         message: "Сообщение",
         send: "Отправить",
+        sending: "Отправка...",
+        sent: "Заявка отправлена",
       },
       pricePage: {
         prices: "Цены",
