@@ -47,17 +47,18 @@ const updatePositions = () => {
   movingEls.value.forEach((el) => {
     const targetOffset = Math.min(window.scrollY / 6, 200);
 
-    const duration = Math.abs(lastOffset.value - targetOffset) * 8;
-    el.style.transform = `translateY(${-targetOffset}px)`;
+    const duration = Math.abs(lastOffset.value - targetOffset) * 10;
+    
     el.style.transitionDuration = duration + "ms";
+    el.style.transform = `translateY(${-targetOffset}px)`;
     lastOffset.value = targetOffset;
-
-    console.log(duration);
+    
 
     if (!duration) {
       document.addEventListener("scroll", handleScroll, { once: true });
       return;
     }
+    
 
     setTimeout(() => {
       updatePositions();
