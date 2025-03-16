@@ -49,7 +49,6 @@ const updatePositions = () => {
 
     const duration = Math.abs(lastOffset.value - targetOffset) * 10;
     
-    el.style.transitionDuration = duration + "ms";
     el.style.transform = `translateY(${-targetOffset}px)`;
     lastOffset.value = targetOffset;
     
@@ -58,6 +57,7 @@ const updatePositions = () => {
       document.addEventListener("scroll", handleScroll, { once: true });
       return;
     }
+    el.style.transitionDuration = duration + "ms";
     
 
     setTimeout(() => {
