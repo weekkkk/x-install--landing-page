@@ -147,7 +147,7 @@ export default defineI18nConfig(() => ({
       },
     },
     ru: {
-      home: "Главная стрница",
+      home: "Главная страница",
       aboutUs: "О нас",
       services: "Услуги",
       price: "Цены",
