@@ -5,7 +5,6 @@ const inputTelegram = ref("");
 
 const textereaMessage = ref("");
 
-const isDefault = ref(true);
 const isPending = ref(false);
 const isSuccess = ref(false);
 
@@ -26,7 +25,6 @@ const formState = {
 const sendFormInfo = async () => {
   if (!isFormValid.value) return;
 
-  isDefault.value = false;
   isPending.value = true;
   try {
     const data: FeedbackDataDto = {
@@ -46,7 +44,6 @@ const sendFormInfo = async () => {
     setTimeout(() => {
       isPending.value = false;
       isSuccess.value = false;
-      isDefault.value = true;
     }, 2000);
   }
 };
@@ -114,11 +111,13 @@ const sendFormInfo = async () => {
         />
       </UFormGroup>
       <UButton
-        :disabled="!isDefault"
+        :disabled="isPending || isSuccess"
         type="submit"
         class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-6 max-md:mt-2"
       >
-        <span v-show="isDefault">{{ $t("feedBackPage.send") }}</span>
+        <span v-show="!isPending && !isSuccess">{{
+          $t("feedBackPage.send")
+        }}</span>
         <span v-show="isPending">{{ $t("feedBackPage.sending") }}</span>
         <span v-show="isSuccess">{{ $t("feedBackPage.sent") }}</span>
       </UButton>
