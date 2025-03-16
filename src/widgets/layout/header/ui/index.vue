@@ -47,15 +47,17 @@ const isHeaderVisible = ref(true);
 const lastScrollY = ref(0);
 
 const handleScroll = (e: Event) => {
-  const currentScrollY = window.scrollY;
+  if (!isOpenDrawer.value) {
+    const currentScrollY = window.scrollY;
 
-  if (currentScrollY === 0) {
-    isHeaderVisible.value = true;
-  } else {
-    isHeaderVisible.value = currentScrollY < lastScrollY.value;
+    if (currentScrollY === 0) {
+      isHeaderVisible.value = true;
+    } else {
+      isHeaderVisible.value = currentScrollY < lastScrollY.value;
+    }
+
+    lastScrollY.value = currentScrollY;
   }
-
-  lastScrollY.value = currentScrollY;
 };
 
 const scrollToSection = (id: string) => {
