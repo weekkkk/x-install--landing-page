@@ -35,26 +35,30 @@ const updatePositions = () => {
   if(!movingEls.value) return
   
   movingEls.value.forEach((el) => {
-    const targetOffset = window.scrollY;
+    const targetOffset = window.scrollY / 10;
 
     el.style.transform = `translateY(${-targetOffset}px)`;
+    el.style.transitionDuration = (targetOffset / 20 * 0.05) + "s" 
   });
-
 };
+const ticking = ref(false);
 
-const handleScroll = () => {
-    updatePositions(); // Запускаем один раз за кадр
+const handleScroll = (e?: Event) => {
+  if (!ticking.value) {
+    requestAnimationFrame(() => {
+      updatePositions();
+      ticking.value = false;
+    });
+    ticking.value = true;
+  }
 };
 onMounted(() => {
-
   movingEls.value = document.querySelectorAll(".moving-element")
   handleScroll()
-  
-
-  movingEls.value.forEach(el => el.onload = () => handleScroll())
 
   document.addEventListener("scroll", handleScroll);
 });
+
 
 onUnmounted(() => {
   document.removeEventListener("scroll", handleScroll); // Очищаем слушатель при удалении компонента
