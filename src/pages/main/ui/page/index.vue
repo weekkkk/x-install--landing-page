@@ -18,7 +18,7 @@
   <SocialMediaWidget />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 definePageMeta({
   layout: "default",
 });
@@ -27,32 +27,31 @@ useHead({
   title: "X-Install",
 });
 
-let lastOffset = 0;
-let ticking = false; // Флаг, чтобы не вызывать лишние кадры
+const movingEls = ref<NodeListOf<HTMLElement> | null>(null)
 
 const updatePositions = () => {
-  document.querySelectorAll(".moving-element").forEach((el) => {
-    const speed = el.dataset.speed || 6;
-    const maxOffset = 200;
-    const targetOffset = Math.min(window.scrollY / speed, maxOffset);
+  console.log(movingEls.value);
+  
+  if(!movingEls.value) return
+  
+  movingEls.value.forEach((el) => {
+    const targetOffset = Math.min(window.scrollY / 4, 200);
 
-    lastOffset += (targetOffset - lastOffset) * 0.1;
-    el.style.transform = `translateY(${-lastOffset}px)`;
+    el.style.transform = `translateY(${-targetOffset}px)`;
   });
 
-  ticking = false; // Сбрасываем флаг после отрисовки
 };
 
 const handleScroll = () => {
-  if (!ticking) {
-    ticking = true;
-    requestAnimationFrame(updatePositions); // Запускаем один раз за кадр
-  }
+    updatePositions(); // Запускаем один раз за кадр
 };
 onMounted(() => {
-  updatePositions();
 
-  handleScroll();
+  movingEls.value = document.querySelectorAll(".moving-element")
+  handleScroll()
+  
+
+  movingEls.value.forEach(el => el.onload = () => handleScroll())
 
   document.addEventListener("scroll", handleScroll);
 });
