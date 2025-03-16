@@ -47,15 +47,17 @@ const isHeaderVisible = ref(true);
 const lastScrollY = ref(0);
 
 const handleScroll = (e: Event) => {
-  const currentScrollY = window.scrollY;
+  if (!isOpenDrawer.value) {
+    const currentScrollY = window.scrollY;
 
-  if (currentScrollY === 0) {
-    isHeaderVisible.value = true;
-  } else {
-    isHeaderVisible.value = currentScrollY < lastScrollY.value;
+    if (currentScrollY === 0) {
+      isHeaderVisible.value = true;
+    } else {
+      isHeaderVisible.value = currentScrollY < lastScrollY.value;
+    }
+
+    lastScrollY.value = currentScrollY;
   }
-
-  lastScrollY.value = currentScrollY;
 };
 
 const scrollToSection = (id: string) => {
@@ -159,7 +161,7 @@ onUnmounted(() => {
       leave-to-class="opacity-0"
     >
       <div
-        v-show="isOpenDrawer"
+        v-if="isOpenDrawer"
         class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
       >
         <div class="flex flex-col items-center gap-2 text-2xl">
