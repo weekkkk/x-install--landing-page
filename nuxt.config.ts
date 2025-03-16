@@ -37,6 +37,11 @@ export default defineNuxtConfig({
               : ""
           }/fonts/sf-pro-display/sf-pro-display.style.css`,
         },
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/images/fivecon.svg",
+        },
       ],
     },
   },
