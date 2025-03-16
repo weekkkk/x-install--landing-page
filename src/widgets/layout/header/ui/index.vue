@@ -161,7 +161,7 @@ onUnmounted(() => {
       leave-to-class="opacity-0"
     >
       <div
-        v-if="isOpenDrawer"
+        v-show="isOpenDrawer"
         class="md:hidden fixed inset-0 max-md:bg-black/50 flex flex-col backdrop-blur-2xl items-center justify-center text-white mt-[-.8rem]"
       >
         <div class="flex flex-col items-center gap-2 text-2xl">
