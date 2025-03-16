@@ -35,7 +35,7 @@ const updatePositions = () => {
   if(!movingEls.value) return
   
   movingEls.value.forEach((el) => {
-    const targetOffset = Math.min(window.scrollY / 4, 200);
+    const targetOffset = window.scrollY;
 
     el.style.transform = `translateY(${-targetOffset}px)`;
   });
