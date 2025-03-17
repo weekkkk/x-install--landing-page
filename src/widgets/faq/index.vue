@@ -42,31 +42,38 @@ const items = computed(() => {
       <UAccordion :items="items">
         <template #default="{ item, open }" as="div">
           <div
-            class="text-4xl font-bold flex items-center justify-between max-md:text-lg transition-all duration-500"
-            :class="{ 'max-md:mt-6': open }"
+            class="flex flex-col max-md:max-h-20 transition-all"
+            :class="{
+              'max-md:max-h-[5.85rem]': open,
+            }"
           >
-            <span
-              class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
+            <div
+              class="max-md:mt-[2.5rem] max-md:-translate-y-1/2 text-4xl max-md:text-lg leading-[1.2] max-md:leading-[1.34] font-bold flex justify-between transition-all"
+              :class="{ 'max-md:!-translate-y-0': open }"
             >
-              <template v-if="item.accent !== ''">
-                <span>{{ item.label.split(item.accent)[0] }}</span>
-                <span
-                  class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
-                >
-                  {{ item.accent }}
-                </span>
-                <span>{{ item.label.split(item.accent)[1] }}</span>
-              </template>
-              <template v-else>
-                {{ item.label }}
-              </template>
-            </span>
-            <UIcon
-              variant="ghost"
-              :name="'xi-i-arrow-down'"
-              class="transition-transform duration-300 p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 max-md:mr-6"
-              :class="{ 'rotate-180 max-md:self-start': open }"
-            />
+              <span class="whitespace-pre-wrap inline"
+                ><template v-if="item.accent !== ''">
+                  <span>{{ item.label.split(item.accent)[0] }}</span
+                  ><span
+                    class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
+                  >
+                    {{ item.accent }} </span
+                  ><span>{{
+                    item.label.split(item.accent)[1]
+                  }}</span> </template
+                ><template v-else>
+                  {{ item.label }}
+                </template></span
+              >
+              <div class="relative w-6 max-md:mr-6">
+                <UIcon
+                  variant="ghost"
+                  :name="'xi-i-arrow-down'"
+                  class="transition-all p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 absolute top-1/2 right-0 -translate-y-1/2"
+                  :class="{ 'rotate-180 !translate-y-0 !top-0': open }"
+                />
+              </div>
+            </div>
           </div>
         </template>
       </UAccordion>
