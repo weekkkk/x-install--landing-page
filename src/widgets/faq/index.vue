@@ -48,7 +48,7 @@ const items = computed(() => {
             }"
           >
             <div
-              class="max-md:mt-[2.5rem] max-md:-translate-y-1/2 text-4xl max-md:text-lg leading-[1.2] max-md:leading-[1.34] font-bold flex justify-between transition-all"
+              class="max-md:mt-[2.5rem] max-md:-translate-y-1/2 text-4xl max-md:text-lg leading-[1.2] max-md:leading-[1.34] font-bold flex justify-between transition-all duration-500"
               :class="{ 'max-md:!-translate-y-0': open }"
             >
               <span class="whitespace-pre-wrap inline"
@@ -65,11 +65,11 @@ const items = computed(() => {
                   {{ item.label }}
                 </template></span
               >
-              <div class="relative w-6 max-md:mr-6">
+              <div class="relative w-6">
                 <UIcon
                   variant="ghost"
                   :name="'xi-i-arrow-down'"
-                  class="transition-all p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 absolute top-1/2 right-0 -translate-y-1/2"
+                  class="transition-all p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 absolute top-1/2 right-0 -translate-y-1/2 duration-500"
                   :class="{ 'rotate-180 !translate-y-0 !top-0': open }"
                 />
               </div>
