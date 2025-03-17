@@ -123,17 +123,21 @@ export default defineI18nConfig(() => ({
         content:
           "ASO is a comprehensive approach to working on the content of a mobile app page in Google Play, App Store, and other app stores.",
         label2: "Why is ASO necessary?",
+        labelMobile2: "Why is ASO\nnecessary?",
         accent2: "ASO",
         content2:
           "To increase search traffic and get the app to the top of the App Store and Google Play.",
         label3: "What is Google UAC?",
+        labelMobile3: "What is Google UAC?",
         content3:
           "Google UAC is a convenient tool for promoting mobile applications that uses artificial intelligence algorithms to interact with users using Google networks.",
         label4: "What do our services provide?",
-        accent4: "our services",
+        labelMobile4: "What do our\nservices provide?",
+        accent4: "our\nservices",
         content4:
           "We offer motivated installs at the best market price, which improves your keyword rankings in the App Store and Google Play.",
         label5: "What are In-App Ads?",
+        labelMobile5: "What are In-App Ads?",
         content5:
           "In-app advertising allows companies to promote their products and services to a target audience already using mobile apps. It is an effective way to attract user attention and encourage action.",
         accent5: "",
@@ -270,17 +274,21 @@ export default defineI18nConfig(() => ({
         content:
           "ASO - это комплексный подход к работе над содержимым страницы мобильного приложения в Google Play, App Store и других магазинах приложений.",
         label2: "Для чего необходимо ASO?",
+        labelMobile2: "Для чего\nнеобходимо ASO?",
         accent2: "ASO?",
         content2:
           "Чтобы увеличить поисковый трафик и вывести приложение на первые позиции в App Store и Google Play.",
         label3: "Что такое Google UAC?",
+        labelMobile3: "Что такое\nGoogle UAC?",
         content3:
-          "Google UAC – удобный инструмент для продвижения мобильных приложений, использующий\nалгоритмы искусственного интеллекта для взаимодействия с юзерами с помощью сетей Google",
+          "Google UAC – удобный инструмент для продвижения мобильных приложений, использующий алгоритмы искусственного интеллекта для взаимодействия с юзерами с помощью сетей Google",
         label4: "Что предоставляют наши услуги?",
+        labelMobile4: "Что предоставляют\nнаши услуги?",
         accent4: "наши услуги?",
         content4:
           "Мы предлагаем мотивированные установки по лучшей рыночной цене, что повышает рейтинг ваших ключевых слов в App Store и Google Play.",
         label5: "Что такое In-App Ads?",
+        labelMobile5: "Что такое In-App\nAds?",
         content5:
           "Реклама в приложениях позволяет компаниям продвигать свои продукты и услуги целевой аудитории, уже использующей мобильные приложения. Это эффективный способ привлечь внимание пользователей и побудить их к действию.",
         accent5: "",

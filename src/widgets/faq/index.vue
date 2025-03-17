@@ -39,7 +39,8 @@ const items = computed(() => {
           class="absolute -right-[5.85rem] bottom-[2.7rem] !w-[12.65rem] !h-[12.65rem] max-md:!w-[5.55rem] max-md:!h-[5.55rem] max-md:bottom-[0.39rem] max-md:-right-[1.85rem] max-md:!blur-[5.25rem] !blur-[15rem]"
         />
       </div>
-      <UAccordion :items="items">
+      <UiAccordion :items="items" />
+      <!-- <UAccordion :items="items">
         <template #default="{ item, open }" as="div">
           <div
             class="text-4xl font-bold flex items-center justify-between max-md:text-lg transition-all duration-500"
@@ -69,7 +70,7 @@ const items = computed(() => {
             />
           </div>
         </template>
-      </UAccordion>
+      </UAccordion> -->
     </div>
   </section>
 </template>
