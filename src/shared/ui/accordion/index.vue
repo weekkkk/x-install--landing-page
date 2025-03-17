@@ -2,10 +2,10 @@
   <div
     v-for="item in items"
     :key="item.id"
-    class="bg-jetBlack relative w-full max-md:rounded-[2rem] max-md:w-[17.7rem] max-md:text-base mb-4 pl-10 pr-10 pb-[3.2rem] pt-[3.2rem] rounded-[2.5rem] min-h-[10rem] max-md:min-h-20 max-md:pl-6 max-md:py-0 flex justify-between transition-all duration-300"
+    class="bg-jetBlack relative w-full max-md:rounded-[2rem] max-md:w-[17.7rem] max-md:text-base mb-4 pl-10 pr-10 pb-[3.2rem] pt-[3.2rem] rounded-[2.5rem] min-h-[10rem] max-md:min-h-20 max-md:pl-6 max-md:py-0 flex justify-between"
   >
     <div
-      class="transition-all duration-300"
+      class="duration-300"
       :class="{
         'max-md:pb-[2.95rem]': openId === item.id,
         'max-md:mt-[1.6rem]': labelLines[item.id] === 1,
@@ -30,16 +30,16 @@
         </template>
       </span>
       <Transition
-        enter-active-class="transition-transform transition-opacity duration-200 ease-in-out"
+        enter-active-class="transition-transform transition-opacity duration-150 ease-in-out"
         enter-from-class="opacity-0 transform scale-y-0 transform-gpu"
         enter-to-class="opacity-100 transform scale-y-100 transform-gpu"
-        leave-active-class="transition-transform transition-opacity duration-200 ease-in-out"
+        leave-active-class="transition-transform transition-opacity duration-150 ease-in-out"
         leave-from-class="opacity-100 transform scale-y-100 transform-gpu"
         leave-to-class="opacity-0 transform scale-y-0 transform-gpu"
       >
         <div
           v-show="openId === item.id"
-          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base overflow-hidden"
+          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base overflow-hidden origin-top"
           style="will-change: transform, opacity; backface-visibility: hidden"
         >
           {{ item.content }}
@@ -50,9 +50,7 @@
       variant="ghost"
       :name="'xi-i-arrow-down'"
       class="absolute right-10 top-14 max-md:right-6 max-md:top-7 transition-transform duration-300 p-0 md:min-w-12 md:min-h-12 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0"
-      :class="{
-        'rotate-180 max-md:self-start': openId === item.id,
-      }"
+      :class="{ 'rotate-180 max-md:self-start': openId === item.id }"
       @click="openContent(item.id)"
     />
   </div>
