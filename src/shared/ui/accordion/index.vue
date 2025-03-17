@@ -1,33 +1,3 @@
-<script setup lang="ts">
-import { ref, onMounted, nextTick } from "vue";
-import type { AccordionProps } from "./types";
-
-const props = defineProps<AccordionProps>();
-
-const openId = ref<number | null>(null);
-const labelLines = ref<Record<number, number>>({});
-
-const openContent = (id: number) => {
-  openId.value = openId.value === id ? null : id;
-};
-
-// Функция для подсчета строк заголовка
-const countLabelLines = (id: number) => {
-  nextTick(() => {
-    const element = document.getElementById(`label-${id}`);
-    if (element) {
-      const lineHeight = parseFloat(getComputedStyle(element).lineHeight);
-      const height = element.clientHeight;
-      labelLines.value[id] = Math.round(height / lineHeight);
-    }
-  });
-};
-
-onMounted(() => {
-  props.items.forEach((item) => countLabelLines(item.id));
-});
-</script>
-
 <template>
   <div
     v-for="item in items"
@@ -60,16 +30,16 @@ onMounted(() => {
         </template>
       </span>
       <Transition
-        enter-active-class="transition-all duration-200 ease-in-out"
-        enter-from-class="max-h-0"
-        enter-to-class="max-h-[50rem]"
-        leave-active-class="transition-all duration-200 ease-in-out"
-        leave-from-class="max-h-[50rem]"
-        leave-to-class="max-h-0"
+        enter-active-class="transition-transform transition-opacity duration-200 ease-in-out"
+        enter-from-class="opacity-0 transform scale-y-0"
+        enter-to-class="opacity-100 transform scale-y-100"
+        leave-active-class="transition-transform transition-opacity duration-200 ease-in-out"
+        leave-from-class="opacity-100 transform scale-y-100"
+        leave-to-class="opacity-0 transform scale-y-0"
       >
         <div
           v-show="openId === item.id"
-          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base overflow-hidden"
+          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base origin-top overflow-hidden"
         >
           {{ item.content }}
         </div>
@@ -86,3 +56,33 @@ onMounted(() => {
     />
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, nextTick } from "vue";
+import type { AccordionProps } from "./types";
+
+const props = defineProps<AccordionProps>();
+
+const openId = ref<number | null>(null);
+const labelLines = ref<Record<number, number>>({});
+
+const openContent = (id: number) => {
+  openId.value = openId.value === id ? null : id;
+};
+
+// Функция для подсчета строк заголовка
+const countLabelLines = (id: number) => {
+  nextTick(() => {
+    const element = document.getElementById(`label-${id}`);
+    if (element) {
+      const lineHeight = parseFloat(getComputedStyle(element).lineHeight);
+      const height = element.clientHeight;
+      labelLines.value[id] = Math.round(height / lineHeight);
+    }
+  });
+};
+
+onMounted(() => {
+  props.items.forEach((item) => countLabelLines(item.id));
+});
+</script>
