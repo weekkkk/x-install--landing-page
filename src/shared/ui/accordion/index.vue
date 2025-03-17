@@ -31,15 +31,16 @@
       </span>
       <Transition
         enter-active-class="transition-transform transition-opacity duration-200 ease-in-out"
-        enter-from-class="opacity-0 transform scale-y-0"
-        enter-to-class="opacity-100 transform scale-y-100"
+        enter-from-class="opacity-0 transform scale-y-0 transform-gpu"
+        enter-to-class="opacity-100 transform scale-y-100 transform-gpu"
         leave-active-class="transition-transform transition-opacity duration-200 ease-in-out"
-        leave-from-class="opacity-100 transform scale-y-100"
-        leave-to-class="opacity-0 transform scale-y-0"
+        leave-from-class="opacity-100 transform scale-y-100 transform-gpu"
+        leave-to-class="opacity-0 transform scale-y-0 transform-gpu"
       >
         <div
           v-show="openId === item.id"
-          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base origin-top overflow-hidden"
+          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base overflow-hidden"
+          style="will-change: transform, opacity; backface-visibility: hidden"
         >
           {{ item.content }}
         </div>
