@@ -20,7 +20,7 @@ export const mobItems = (t: (key: string) => string) => [
   {
     id: 4,
     label: t("faqPage.labelMobile4"),
-    accent: t("faqPage.accent4"),
+    accent: t("faqPage.accentMobile4"),
     content: t("faqPage.content4"),
   },
   {

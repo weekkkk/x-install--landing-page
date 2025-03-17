@@ -40,37 +40,6 @@ const items = computed(() => {
         />
       </div>
       <UiAccordion :items="items" />
-      <!-- <UAccordion :items="items">
-        <template #default="{ item, open }" as="div">
-          <div
-            class="text-4xl font-bold flex items-center justify-between max-md:text-lg transition-all duration-500"
-            :class="{ 'max-md:mt-6': open }"
-          >
-            <span
-              class="whitespace-pre-wrap inline leading-[1.2] max-md:leading-[1.34]"
-            >
-              <template v-if="item.accent !== ''">
-                <span>{{ item.label.split(item.accent)[0] }}</span>
-                <span
-                  class="bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text"
-                >
-                  {{ item.accent }}
-                </span>
-                <span>{{ item.label.split(item.accent)[1] }}</span>
-              </template>
-              <template v-else>
-                {{ item.label }}
-              </template>
-            </span>
-            <UIcon
-              variant="ghost"
-              :name="'xi-i-arrow-down'"
-              class="transition-transform duration-300 p-0 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0 max-md:mr-6"
-              :class="{ 'rotate-180 max-md:self-start': open }"
-            />
-          </div>
-        </template>
-      </UAccordion> -->
     </div>
   </section>
 </template>

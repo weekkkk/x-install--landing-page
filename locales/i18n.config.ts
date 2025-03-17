@@ -133,7 +133,8 @@ export default defineI18nConfig(() => ({
           "Google UAC is a convenient tool for promoting mobile applications that uses artificial intelligence algorithms to interact with users using Google networks.",
         label4: "What do our services provide?",
         labelMobile4: "What do our\nservices provide?",
-        accent4: "our\nservices",
+        accent4: "our services",
+        accentMobile4: "our\nservices",
         content4:
           "We offer motivated installs at the best market price, which improves your keyword rankings in the App Store and Google Play.",
         label5: "What are In-App Ads?",
@@ -285,6 +286,7 @@ export default defineI18nConfig(() => ({
         label4: "Что предоставляют наши услуги?",
         labelMobile4: "Что предоставляют\nнаши услуги?",
         accent4: "наши услуги?",
+        accentMobile4: "наши услуги?",
         content4:
           "Мы предлагаем мотивированные установки по лучшей рыночной цене, что повышает рейтинг ваших ключевых слов в App Store и Google Play.",
         label5: "Что такое In-App Ads?",
