@@ -59,7 +59,7 @@ const handleScroll = (e: Event) => {
 };
 
 const scrollToSection = (id: string) => {
-  const section = document.getElementById(id);
+  const section = document.getElementById(String(id));
 
   if (isOpenDrawer.value) {
     switchStateDrawer();
@@ -68,6 +68,10 @@ const scrollToSection = (id: string) => {
   if (section) {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+};
+
+const scrollToUpPage = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 onMounted(() => {
@@ -93,7 +97,8 @@ onUnmounted(() => {
       <UIcon
         name="xi-i-logo"
         alt="Logo"
-        class="w-[8.329rem] h-9 max-md:w-24 max-md:h-6 text-left justify-start"
+        class="w-[8.329rem] h-9 max-md:w-24 max-md:h-6 text-left justify-start cursor-pointer"
+        @click="scrollToUpPage"
       />
     </div>
     <div
