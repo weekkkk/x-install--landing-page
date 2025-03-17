@@ -5,7 +5,7 @@
     class="bg-jetBlack relative w-full max-md:rounded-[2rem] max-md:w-[17.7rem] max-md:text-base mb-4 pl-10 pr-10 pb-[3.2rem] pt-[3.2rem] rounded-[2.5rem] min-h-[10rem] max-md:min-h-20 max-md:pl-6 max-md:py-0 flex justify-between"
   >
     <div
-      class="duration-300"
+      class="transition-all duration-300"
       :class="{
         'max-md:pb-[2.95rem]': openId === item.id,
         'max-md:mt-[1.6rem]': labelLines[item.id] === 1,
@@ -29,28 +29,32 @@
           {{ item.label }}
         </template>
       </span>
-      <Transition
-        enter-active-class="transition-transform transition-opacity duration-150 ease-in-out"
-        enter-from-class="opacity-0 transform scale-y-0 transform-gpu"
-        enter-to-class="opacity-100 transform scale-y-100 transform-gpu"
-        leave-active-class="transition-transform transition-opacity duration-150 ease-in-out"
-        leave-from-class="opacity-100 transform scale-y-100 transform-gpu"
-        leave-to-class="opacity-0 transform scale-y-0 transform-gpu"
+      <div
+        class="overflow-hidden transition-all"
+        :class="{
+          'mt-[0.8rem]': openId === item.id,
+          'opacity-0': openId !== item.id,
+        }"
+        :style="{
+          maxHeight: openId === item.id ? `${maxH[item.id]}px` : 0,
+          transitionDuration: `calc(${maxH[item.id]}/20*75ms)`,
+        }"
       >
         <div
-          v-show="openId === item.id"
-          class="mt-[0.8rem] text-mediumGray text-xl font-medium max-md:text-base overflow-hidden origin-top"
-          style="will-change: transform, opacity; backface-visibility: hidden"
+          ref="contentRef"
+          class="text-mediumGray text-xl font-medium max-md:text-base"
         >
           {{ item.content }}
         </div>
-      </Transition>
+      </div>
     </div>
     <UIcon
       variant="ghost"
       :name="'xi-i-arrow-down'"
       class="absolute right-10 top-14 max-md:right-6 max-md:top-7 transition-transform duration-300 p-0 md:min-w-12 md:min-h-12 max-md:w-6 max-md:h-6 cursor-pointer max-md:shrink-0"
-      :class="{ 'rotate-180 max-md:self-start': openId === item.id }"
+      :class="{
+        'rotate-180 max-md:self-start': openId === item.id,
+      }"
       @click="openContent(item.id)"
     />
   </div>
@@ -64,6 +68,8 @@ const props = defineProps<AccordionProps>();
 
 const openId = ref<number | null>(null);
 const labelLines = ref<Record<number, number>>({});
+const contentRef = ref<HTMLElement[]>([]);
+const maxH = ref<Record<number, number>>({});
 
 const openContent = (id: number) => {
   openId.value = openId.value === id ? null : id;
@@ -81,7 +87,20 @@ const countLabelLines = (id: number) => {
   });
 };
 
+// Функция для расчета высоты контента
+const calculateContentHeight = (id: number, index: number) => {
+  nextTick(() => {
+    const element = contentRef.value[index];
+    if (element) {
+      maxH.value[id] = element.clientHeight;
+    }
+  });
+};
+
 onMounted(() => {
-  props.items.forEach((item) => countLabelLines(item.id));
+  props.items.forEach((item, index) => {
+    countLabelLines(item.id);
+    calculateContentHeight(item.id, index);
+  });
 });
 </script>
