@@ -21,4 +21,11 @@
   .text-gradient {
     @apply bg-gradient-to-r from-turquoise-100 to-green text-transparent bg-clip-text;
   }
+  .moving-element {
+    @apply transition-transform translate-y-0 duration-0;
+  }
+
+  .box {
+    @apply max-md:!translate-y-0;
+  }
 }
