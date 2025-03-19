@@ -25,7 +25,7 @@
     @apply transition-transform translate-y-0 duration-0;
   }
 
-  .box {
+  /* .box {
     @apply max-md:!translate-y-0;
-  }
+  } */
 }

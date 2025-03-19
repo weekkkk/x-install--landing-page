@@ -61,7 +61,7 @@
         </UButton>
       </div>
     </div>
-    <UiBlurCircle
+    <!-- <UiBlurCircle
       color="bg-turquoise-100"
       class="absolute left-[2.6rem] top-[15.5rem] max-md:w-[5.941rem] max-md:h-[6.17rem] max-md:top-[7.157rem] max-md:-left-[4.82rem] max-md:!blur-[5rem]"
     />
@@ -76,7 +76,7 @@
     <UiBlurCircle
       color="bg-violet"
       class="absolute left-[63.25rem] max-md:left-[13.85rem] max-md:top-[5.75rem] top-[12.2rem] w-[13.75rem] h-[13.75rem] max-md:w-[5.47rem] max-md:h-[5.7rem] max-md:!blur-[4rem]"
-    />
+    /> -->
     <NuxtImg
       src="/images/grid-lg.webp"
       alt="gridBackground"

@@ -67,15 +67,15 @@ onMounted(() => {
       preload
     />
 
-    <UiBlurCircle
+    <!-- <UiBlurCircle
       color="bg-white"
       class="max-md:left-[3.73rem] max-md:!w-[10.2rem] max-md:!h-[3.48rem] max-md:top-[3.26rem] max-md:!blur-[10rem] absolute top-[19.63rem] left-[31.89rem] -z-[5] !blur-[20rem] !w-[27.2rem] !h-[9.3rem]"
     />
     <UiBlurCircle
       color="bg-turquoise-100"
-      class="absolute w-[15.7rem] h-[15rem] max-md:left-[5.88rem] max-md:top-[6.33rem] max-md:!w-[5.88rem] max-md:!blur-[5rem] max-md:!h-[5.625rem] top-[16.88rem] right-[37.8rem] !blur-[9rem]"
-    />
-    <UiBlurCircle
+      class="absolute w-[15.7rem] h-[15rem] max-md:left-[5.88rem] max-md:top-[6.33rem] max-md:!w-[5.88rem] max-md:!blur-[5rem] max-md:!h-[5.625rem] top-[16.88rem] right-[37.8rem] !blur-[9rem]" 
+    /> -->
+    <!-- <UiBlurCircle
       color="bg-turquoise-100"
       v-show="!isLargeScreen"
       class="absolute !w-[12.85rem] !h-[12.85rem] bottom-[13.89rem] right-[8.8rem]"
@@ -108,7 +108,7 @@ onMounted(() => {
       src="/images/noisegraph4.webp"
       class="absolute w-[72.04rem] h-[21rem] top-[85.85rem] right-0 -z-[1] max-md:top-[8.65rem] max-md:left-[5.08rem]"
     />
-    <UiGraph4 />
-    <UiGraph1 />
+    <!-- <UiGraph4 />
+    <UiGraph1 /> -->
   </div>
 </template>
