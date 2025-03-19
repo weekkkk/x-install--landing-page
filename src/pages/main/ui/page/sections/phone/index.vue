@@ -79,7 +79,7 @@ onMounted(() => {
       color="bg-turquoise-100"
       v-show="!isLargeScreen"
       class="absolute !w-[12.85rem] !h-[12.85rem] bottom-[13.89rem] right-[8.8rem]"
-    />
+    /> -->
     <NuxtImg
       src="/images/noisegraph1.webp"
       class="absolute max-md:w-[14.57rem] max-md:h-[9.49rem] max-md:top-[4.609rem] max-md:-left-[0.85rem] w-[72.15rem] h-[46.3rem] left-[1.3rem] top-[7.48rem] -z-[1] opacity-20"
@@ -100,15 +100,12 @@ onMounted(() => {
       src="/images/noisegraph3.webp"
       class="absolute max-md:w-[14.9rem] max-md:h-[7.02rem] max-md:top-[4.55rem] max-md:-right-[1rem] w-[71.85rem] h-[29.05rem] top-[11.82rem] -right-[1.3rem] -z-[3] mix-blend-overlay"
     />
-    <!-- <NuxtImg
-      src="/images/graph4.svg"
-      class=""
-    /> -->
+    <NuxtImg src="/images/graph4.svg" class="" />
     <NuxtImg
       src="/images/noisegraph4.webp"
       class="absolute w-[72.04rem] h-[21rem] top-[85.85rem] right-0 -z-[1] max-md:top-[8.65rem] max-md:left-[5.08rem]"
     />
-    <!-- <UiGraph4 />
-    <UiGraph1 /> -->
+    <UiGraph4 />
+    <UiGraph1 />
   </div>
 </template>
