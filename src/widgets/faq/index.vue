@@ -19,25 +19,32 @@ const items = computed(() => {
         >
           FAQ
         </h2>
-        <!-- <UiBlurCircle
+        <UiBlurCircle
           v-if="isLargeScreen"
           :color="'bg-turquoise-100'"
           class="absolute left-[39.1rem] bottom-[2.5rem] !w-[11.15rem] !h-[11.15rem] !blur-[11rem]"
-        /> -->
+        />
         <NuxtImg
           v-show="isLargeScreen"
           src="/images/faq-grid-w.webp"
           alt="gridBackground"
           class="absolute w-[28rem] h-[28rem] max-w-none -top-[12.15rem] left-[30.65rem] -z-20"
         />
-        <!-- <UiBlurCircle
+        <UiBlurCircle
           :color="'bg-turquoise-100'"
-          class="absolute left-[13.45rem] bottom-[3.55rem] !w-[12.65rem] !h-[12.65rem] max-md:-left-[0.25rem] max-md:bottom-[0.585rem] max-md:!w-[4.56rem] max-md:!blur-[5.5rem] max-md:!h-[4.56rem] !blur-[17rem]"
+          class="max-md:hidden absolute left-[13.45rem] bottom-[3.55rem] !w-[12.65rem] !h-[12.65rem] max-md:-left-[0.25rem] max-md:bottom-[0.585rem] max-md:!w-[4.56rem] max-md:!blur-[5.5rem] max-md:!h-[4.56rem] !blur-[17rem]"
         />
         <UiBlurCircle
           :color="'bg-turquoise-100'"
-          class="absolute -right-[5.85rem] bottom-[2.7rem] !w-[12.65rem] !h-[12.65rem] max-md:!w-[5.55rem] max-md:!h-[5.55rem] max-md:bottom-[0.39rem] max-md:-right-[1.85rem] max-md:!blur-[5.25rem] !blur-[15rem]"
-        /> -->
+          class="max-md:hidden absolute -right-[5.85rem] bottom-[2.7rem] !w-[12.65rem] !h-[12.65rem] max-md:!w-[5.55rem] max-md:!h-[5.55rem] max-md:bottom-[0.39rem] max-md:-right-[1.85rem] max-md:!blur-[5.25rem] !blur-[15rem]"
+        />
+        <div class="absolute -left-10 -right-10 -top-64 -z-20">
+          <NuxtImg
+            src="/images/gradients-md.webp"
+            alt="gridBackground"
+            class="w-full"
+          />
+        </div>
       </div>
       <UAccordion :items="items">
         <template #default="{ item, open }" as="div">

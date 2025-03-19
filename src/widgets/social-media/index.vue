@@ -2,9 +2,9 @@
 <template>
   <section class="mt-[16rem] mb-[14.3rem] max-md:mb-[7.3rem] max-md:mt-[10rem]">
     <div class="relative flex justify-center">
-      <!-- <UiBlurCircle
-        color="w-[18.25rem] h-[18.25rem] max-md:w-[7rem] max-md:h-[7rem] max-md:-top-[4.2rem] max-md:-left-[5rem] max-md:blur-[6.5rem] absolute bg-turquoise-100 top-[1.65rem] left-[-5rem] blur-[17rem]"
-      /> -->
+      <UiBlurCircle
+        color="max-md:hidden w-[18.25rem] h-[18.25rem] max-md:w-[7rem] max-md:h-[7rem] max-md:-top-[4.2rem] max-md:-left-[5rem] max-md:blur-[6.5rem] absolute bg-turquoise-100 top-[1.65rem] left-[-5rem] blur-[17rem]"
+      />
       <div class="flex flex-col items-center">
         <div class="flex flex-col items-center">
           <h1
@@ -45,9 +45,16 @@
           />
         </div>
       </div>
-      <!-- <UiBlurCircle
-        color="max-md:w-[10.85rem] max-md:h-[10.85rem] max-md:!blur-[8rem] max-md:-top-[8.39rem] max-md:-right-[6.24rem] w-[18.25rem] h-[18.25rem] absolute bg-violet top-[5rem] -right-5rem blur-[17rem]"
-      /> -->
+      <UiBlurCircle
+        color="max-md:hidden max-md:w-[10.85rem] max-md:h-[10.85rem] max-md:!blur-[8rem] max-md:-top-[8.39rem] max-md:-right-[6.24rem] w-[18.25rem] h-[18.25rem] absolute bg-violet top-[5rem] -right-5rem blur-[17rem]"
+      />
+      <div class="absolute -left-10 -right-10 -top-96 -z-20">
+          <NuxtImg
+            src="/images/gradientsquestion-md.webp"
+            alt="gridBackground"
+            class="w-full"
+          />
+        </div>
     </div>
   </section>
 </template>
