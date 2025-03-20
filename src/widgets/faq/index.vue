@@ -38,7 +38,7 @@ const items = computed(() => {
           :color="'bg-turquoise-100'"
           class="max-md:hidden absolute -right-[5.85rem] bottom-[2.7rem] !w-[12.65rem] !h-[12.65rem] max-md:!w-[5.55rem] max-md:!h-[5.55rem] max-md:bottom-[0.39rem] max-md:-right-[1.85rem] max-md:!blur-[5.25rem] !blur-[15rem]"
         />
-        <div class="absolute -left-10 -right-10 -top-64 -z-20">
+        <div class="md:hidden absolute -left-10 -right-10 -top-64 -z-20">
           <NuxtImg
             src="/images/gradients-md.webp"
             alt="gridBackground"

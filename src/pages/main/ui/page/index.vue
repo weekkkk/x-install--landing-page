@@ -12,7 +12,10 @@
     id="services"
     class="mt-[16.5rem] max-md:mt-[10rem]"
   />
-  <MainPageSectionsFeedBackSection class="mt-[16.5rem] max-md:mt-[10rem]" />
+  <MainPageSectionsFeedBackSection
+    id="feedback"
+    class="mt-[16.5rem] max-md:mt-[10rem]"
+  />
   <PriceListWidget id="price" class="mt-[16.5rem]" />
   <FaqWidget />
   <SocialMediaWidget />

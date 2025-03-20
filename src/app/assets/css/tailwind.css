@@ -15,6 +15,9 @@
   ::-webkit-scrollbar {
     width: 0;
   }
+  #__nuxt {
+    overflow: hidden;
+  }
 }
 
 @layer components {

@@ -33,28 +33,33 @@
             :icon="'fa-brands:telegram-plane'"
             :class="'w-[1.44rem] h-[1.4rem]'"
             class="w-[14rem] h-[3.5rem] flex items-center justify-center max-md:w-full"
+            to="https://t.me/xinstalls"
+            target="_blank"
           />
           <UButton
             class="w-[14rem] h-[3.5rem] flex items-center justify-center text-lg font-semibold max-md:w-full"
+            to="mailto:help@xinstall.com"
             >help@xinstall.com</UButton
           >
           <UButton
             :icon="'fa-brands:skype'"
             :class="'w-[1.2rem] h-[1.2rem]'"
             class="w-[14rem] h-[3.5rem] flex items-center justify-center max-md:w-full"
+            to="https://join.skype.com/invite/moetChbe3Jg0"
+            target="_blank"
           />
         </div>
       </div>
       <UiBlurCircle
         color="max-md:hidden max-md:w-[10.85rem] max-md:h-[10.85rem] max-md:!blur-[8rem] max-md:-top-[8.39rem] max-md:-right-[6.24rem] w-[18.25rem] h-[18.25rem] absolute bg-violet top-[5rem] -right-5rem blur-[17rem]"
       />
-      <div class="absolute -left-10 -right-10 -top-96 -z-20">
-          <NuxtImg
-            src="/images/gradientsquestion-md.webp"
-            alt="gridBackground"
-            class="w-full"
-          />
-        </div>
+      <div class="md:hidden absolute -left-10 -right-10 -top-96 -z-20">
+        <NuxtImg
+          src="/images/gradientsquestion-md.webp"
+          alt="gridBackground"
+          class="w-full"
+        />
+      </div>
     </div>
   </section>
 </template>

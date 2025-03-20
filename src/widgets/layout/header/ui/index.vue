@@ -140,7 +140,11 @@ onUnmounted(() => {
         class="w-[8.5rem]"
         :ui="{ tab: 'h-[3.2rem]' }"
       />
-      <UButton size="sm" class="w-[11.05rem] flex justify-center text-lg">
+      <UButton
+        size="sm"
+        class="w-[11.05rem] flex justify-center text-lg"
+        @click="scrollToSection('feedback')"
+      >
         {{ $t("contact") }}
       </UButton>
     </div>

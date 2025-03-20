@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(String(id));
+
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+</script>
 <template>
   <div class="flex items-center flex-col">
     <div class="w-[66.45rem] max-md:w-[17.65rem]">
@@ -47,6 +55,7 @@
         <UButton
           size="md"
           class="flex justify-center w-[16.5rem] text-lg max-md:text-xs leading-[1.4915rem] max-md:w-[17.6rem] font-semibold"
+          @click="scrollToSection('feedback')"
         >
           {{ $t("start") }}
         </UButton>
@@ -54,6 +63,7 @@
           variant="outline"
           :label="$t('ourServices')"
           class="flex justify-center w-[16.5rem] max-md:text-xs text-lg max-md:h-[2.8rem] max-md:w-[17.6rem] leading-[1.4915rem] font-semibold"
+          @click="scrollToSection('services')"
         >
           <template #trailing>
             <UIcon name="xi-i:arrow-right" class="w-6 h-6" />

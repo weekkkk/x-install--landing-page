@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <section class="mb-10 max-md:mb-[8.2rem]">
+  <section class="mb-10 mx-10 max-md:mx-4 max-md:mb-[8.2rem]">
     <div class="flex justify-between">
       <p class="text-base leading-[1.2]">Copyright © 2023 - 2024</p>
       <p class="text-base leading-[1.2]">XINSTAL</p>
