@@ -7,6 +7,7 @@ const textereaMessage = ref("");
 
 const isPending = ref(false);
 const isSuccess = ref(false);
+const isSent = ref(false);
 
 const isFormValid = computed(() => {
   return (
@@ -35,15 +36,16 @@ const sendFormInfo = async () => {
     await FeedbackService.sendFeedbackForm(data);
     isPending.value = false;
     isSuccess.value = true;
-    inputName.value = "";
-    inputTelegram.value = "";
-    textereaMessage.value = "";
   } catch (error) {
     console.error("Ошибка при отправке данных:", error);
   } finally {
     setTimeout(() => {
       isPending.value = false;
       isSuccess.value = false;
+      isSent.value = true;
+      inputName.value = "";
+      inputTelegram.value = "";
+      textereaMessage.value = "";
     }, 2000);
   }
 };
@@ -111,15 +113,20 @@ const sendFormInfo = async () => {
         />
       </UFormGroup>
       <UButton
-        :disabled="isPending || isSuccess"
+        :disabled="isPending || isSent"
         type="submit"
+        :class="
+          isSent
+            ? 'dark:!bg-gradient-to-r dark:!from-turquoise-100 dark:!to-green !opacity-100 !text-black'
+            : ''
+        "
         class="w-[45rem] max-md:text-xs max-md:w-[17.65rem] h-[6.75rem] max-md:h-[2.9rem] flex items-center justify-center text-lg leading-none mt-6 max-md:mt-2"
       >
-        <span v-show="!isPending && !isSuccess">{{
+        <span v-show="!isPending && !isSent">{{
           $t("feedBackPage.send")
         }}</span>
         <span v-show="isPending">{{ $t("feedBackPage.sending") }}</span>
-        <span v-show="isSuccess">{{ $t("feedBackPage.sent") }}</span>
+        <span v-show="isSent">{{ $t("feedBackPage.sent") }}</span>
       </UButton>
     </UForm>
   </div>
